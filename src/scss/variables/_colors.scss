@@ -1,0 +1,48 @@
+//
+// colors
+//
+$primary-color: #fe0000;
+$secondary-color: #214252;
+$info-text-color: #7d98a1;
+$new-blue: #061928;
+$white: #f1f1f1;
+$black: #1f1f1f;
+
+//
+// shades
+//
+$lighten: 10%;
+$darken: 10%;
+
+//
+//map
+//
+$colors: (
+  primary: (
+    base: $primary-color,
+    light: lighten($primary-color, $lighten),
+    dark: darken($primary-color, $darken),
+  ),
+  secondary: (
+    base: $secondary-color,
+    light: $info-text-color,
+    dark: $new-blue,
+  ),
+  black: (
+    base: $black,
+    light: lighten($black, $lighten),
+    dark: #000000,
+  ),
+  white: (
+    base: $white,
+    light: lighten($white, #ffffff),
+    dark: darken($white, $darken),
+  ),
+);
+
+//
+// function
+//
+@function color($base-color, $shade: base) {
+  @return map-get(map-get($colors, $base-color), $shade);
+} ;
