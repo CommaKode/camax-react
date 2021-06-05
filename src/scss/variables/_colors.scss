@@ -35,7 +35,7 @@ $colors: (
   ),
   white: (
     base: $white,
-    light: lighten($white, #ffffff),
+    light: #ffffff,
     dark: darken($white, $darken),
   ),
 );
