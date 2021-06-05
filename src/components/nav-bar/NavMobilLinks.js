@@ -15,12 +15,30 @@ const NavMobilLinks = () => {
           <button>
             <span>خدمات پس از فروش</span>
           </button>
-          <ul></ul>
+          <ul>
+            <li>
+              <Link to="/services/info">شرح خدمات</Link>
+            </li>
+            <li>
+              <Link to="/services/request">درخواست خدمات</Link>
+            </li>
+          </ul>
         </li>
         <li>
           <button>
             <span>محصولات</span>
           </button>
+          <ul>
+            <li>
+              <Link to="monitor">مونیتور</Link>
+            </li>
+            <li>
+              <Link to="panel">پنل</Link>
+            </li>
+            <li>
+              <Link to="accesories">لوازم جانبی</Link>
+            </li>
+          </ul>
         </li>
         <li>
           <Link to="/lighting">روشنایی</Link>
