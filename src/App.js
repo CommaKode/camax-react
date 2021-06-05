@@ -1,13 +1,13 @@
 import './App.scss';
 import RouteApp from './RouteApp';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Nav from './components/nav-bar/Nav';
+import NavMobile from './components/nav-bar/NavMobile';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Nav />
+        <NavMobile />
         <RouteApp />
       </div>
     </Router>

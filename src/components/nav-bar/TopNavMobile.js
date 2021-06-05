@@ -12,7 +12,7 @@ const TopNavMobile = () => {
         <img src={menu} alt="menu" />
       </button>
       <img src={logo} alt="camax" />
-      <Link>
+      <Link to="/cart">
         <img src={cartVector} alt="cart" to="/cart" />
       </Link>
     </div>
