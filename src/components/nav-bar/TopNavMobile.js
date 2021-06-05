@@ -8,7 +8,9 @@ import cartVector from '../../Images/icons/cart.svg';
 const TopNavMobile = () => {
   return (
     <div className="nav-top-mobile">
-      <button>{menu}</button>
+      <button>
+        <img src={menu} alt="menu" />
+      </button>
       <img src={logo} alt="camax" />
       <Link>
         <img src={cartVector} alt="cart" to="/cart" />
