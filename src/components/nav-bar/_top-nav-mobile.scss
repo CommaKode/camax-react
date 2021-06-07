@@ -1,6 +1,29 @@
 @import '../../scss/variables';
 
 .nav-top-mobile {
+  background-color: color(white, light);
   width: 100%;
   @include between();
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  .ham-btn {
+    background-color: transparent;
+  }
+  .logo {
+    > svg {
+      width: 120px;
+      height: fit-content;
+    }
+  }
+  img {
+    display: block;
+  }
+}
+
+//
+// changing the color of logo's text
+//
+#logo-text {
+  fill: color(black);
 }
