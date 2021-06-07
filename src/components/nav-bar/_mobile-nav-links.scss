@@ -27,6 +27,11 @@
     background-color: transparent;
     color: color(white);
     @include between();
+    img {
+      @include box(10px);
+      transition: $main-transition;
+      transform: rotateZ(90deg);
+    }
   }
 
   // ul that toggles with buttons
@@ -36,4 +41,15 @@
       margin-bottom: 1em;
     }
   }
+}
+
+// for rotating arrow vector
+.r0 {
+  transform: rotateZ(0) !important;
+}
+
+// transition for toggle
+.links li ul {
+  transition: $main-transition;
+  transform-origin: top;
 }
