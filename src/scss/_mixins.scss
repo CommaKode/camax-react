@@ -1,0 +1,23 @@
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin between($direction: row) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin position($top, $right: $top, $bottom: $top, $left: $top) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin pseudo() {
+  content: '';
+  position: absolute;
+}
