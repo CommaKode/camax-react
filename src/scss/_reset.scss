@@ -1,3 +1,8 @@
+@font-face {
+  font-family: bYekan;
+  src: url(../font/Yekan.ttf);
+}
+
 *,
 *::after,
 *::before {
@@ -6,6 +11,7 @@
   padding: 0;
 }
 html {
+  font-family: bYekan;
   font-size: 62.5%;
 }
 body {
