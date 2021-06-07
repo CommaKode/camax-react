@@ -3,9 +3,9 @@ import ToggleList from './ToggleList';
 
 import MobileSearch from './MobileSearch';
 
-const NavMobilLinks = () => {
+const NavMobilLinks = ({ menu }) => {
   return (
-    <div className="container mobile-nav-links">
+    <div className={menu + ' container mobile-nav-links'}>
       <MobileSearch />
       <ul className="links">
         <li>

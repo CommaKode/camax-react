@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import menu from '../../Images/icons/hambergurMenu.svg';
 import cartVector from '../../Images/icons/nav-cart.svg';
 
-const MobileTopNav = () => {
+const MobileTopNav = ({ btn }) => {
   return (
     <div className="container nav-top-mobile">
-      <button className="ham-btn">
-        <img src={menu} alt="menu" />
-      </button>
+      <Link to="/cart">
+        <img src={cartVector} alt="cart" to="/cart" />
+      </Link>
       <Link className="logo" to="/">
         <svg
           width="392"
@@ -45,9 +45,9 @@ const MobileTopNav = () => {
           />
         </svg>
       </Link>
-      <Link to="/cart">
-        <img src={cartVector} alt="cart" to="/cart" />
-      </Link>
+      <button onClick={btn} className="ham-btn">
+        <img src={menu} alt="menu" />
+      </button>
     </div>
   );
 };

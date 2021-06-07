@@ -19,8 +19,8 @@ const ToggleList = ({ title, children }) => {
   return (
     <React.Fragment>
       <button onClick={toggling}>
-        <img src={arrow} alt="arrow" className={rotate} />
         <span>{title}</span>
+        <img src={arrow} alt="arrow" className={rotate} />
       </button>
       <ul className={toggle}>{children}</ul>
     </React.Fragment>

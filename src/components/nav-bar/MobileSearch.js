@@ -3,8 +3,10 @@ import searchVector from '../../Images/icons/search.svg';
 
 const SearchMobile = () => {
   return (
-    <div>
-      <img src={searchVector} alt="search" />
+    <div className="mobile-search">
+      <button>
+        <img src={searchVector} alt="search" />
+      </button>
       <input type="search" />
     </div>
   );
