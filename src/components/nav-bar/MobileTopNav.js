@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import menu from '../../Images/icons/hambergurMenu.svg';
 import cartVector from '../../Images/icons/nav-cart.svg';
 
-const TopNavMobile = () => {
+const MobileTopNav = () => {
   return (
     <div className="container nav-top-mobile">
       <button className="ham-btn">
@@ -52,4 +52,4 @@ const TopNavMobile = () => {
   );
 };
 
-export default TopNavMobile;
+export default MobileTopNav;

@@ -1,14 +1,14 @@
 import React from 'react';
-import TopNavMobile from './TopNavMobile';
-import SearchMobile from './SearchMobile';
-import NavMobilLinks from './NavMobilLinks';
+import MobileSearch from './MobileSearch';
+import MobileNavLinks from './MobileNavLinks';
+import MobileTopNav from './MobileTopNav';
 
 const Nav = () => {
   return (
     <React.Fragment>
-      <TopNavMobile />
-      <SearchMobile />
-      <NavMobilLinks />
+      <MobileTopNav />
+      <MobileSearch />
+      <MobileNavLinks />
     </React.Fragment>
   );
 };
