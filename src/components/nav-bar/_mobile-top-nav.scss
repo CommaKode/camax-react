@@ -1,7 +1,7 @@
 @import '../../scss/variables';
 
 .nav-top-mobile {
-  background-color: color(white, light);
+  // transition: $main-transition;
   @include between();
   padding-top: 1em;
   padding-bottom: 1em;
