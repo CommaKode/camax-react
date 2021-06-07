@@ -1,6 +1,17 @@
 @font-face {
-  font-family: bYekan;
-  src: url(../font/Yekan.ttf);
+  font-family: yekan;
+  src: url(../font/IRANYekanRegular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: yekan;
+  src: url(../font/IRANYekanBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: yekan;
+  src: url(../font/IRANYekanLight.ttf);
+  font-weight: 300;
 }
 
 *,
@@ -11,7 +22,8 @@
   padding: 0;
 }
 html {
-  font-family: bYekan;
+  font-family: yekan;
+  font-weight: 400;
   font-size: 62.5%;
 }
 body {
