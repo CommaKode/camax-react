@@ -1,0 +1,39 @@
+@import '../../scss/variables';
+
+.mobile-nav-links {
+  background-color: color(black);
+  a {
+    color: color(white);
+  }
+}
+
+.links > li {
+  position: relative;
+  padding: 1em 0;
+  &::after {
+    background-color: color(white, dark);
+    @include box(100%, 1px);
+    @include pseudo();
+    bottom: 0;
+  }
+
+  // selecting li direct cillderen => a(links) and button and ul
+  > * {
+    text-align: right;
+    width: 100%;
+  }
+
+  button {
+    background-color: transparent;
+    color: color(white);
+    @include between();
+  }
+
+  // ul that toggles with buttons
+  ul {
+    margin-top: 1em;
+    li:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+}

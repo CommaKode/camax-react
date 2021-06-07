@@ -1,5 +1,17 @@
 @import './variables';
 
 .container {
+  width: 100%;
   padding: $container-padding;
+}
+
+// classes for toggling width with butttons
+
+.h0 {
+  height: 0;
+  display: none;
+}
+.h100 {
+  height: 100%;
+  display: block;
 }

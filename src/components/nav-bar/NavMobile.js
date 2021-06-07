@@ -1,16 +1,14 @@
 import React from 'react';
-import MobileSearch from './MobileSearch';
 import MobileNavLinks from './MobileNavLinks';
 import MobileTopNav from './MobileTopNav';
 
-const Nav = () => {
+const NavMobile = () => {
   return (
     <React.Fragment>
       <MobileTopNav />
-      <MobileSearch />
       <MobileNavLinks />
     </React.Fragment>
   );
 };
 
-export default Nav;
+export default NavMobile;

@@ -10,7 +10,7 @@
   flex-direction: $direction;
 }
 
-@mixin position($top, $right: $top, $bottom: $top, $left: $top) {
+@mixin position($top, $right: $top, $bottom: $top, $left: $right) {
   top: $top;
   right: $right;
   bottom: $bottom;
@@ -20,4 +20,5 @@
 @mixin pseudo() {
   content: '';
   position: absolute;
+  display: block;
 }
