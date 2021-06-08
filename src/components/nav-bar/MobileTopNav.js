@@ -60,9 +60,9 @@ const MobileTopNav = ({ btn, bg, fill }) => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <line y1="1" x2="28" y2="1" stroke="#1F1F1F" stroke-width="2" />
-          <line y1="9" x2="28" y2="9" stroke="#1F1F1F" stroke-width="2" />
-          <line y1="17" x2="28" y2="17" stroke="#1F1F1F" stroke-width="2" />
+          <line y1="1" x2="28" y2="1" stroke="#1F1F1F" strokeWidth="2" />
+          <line y1="9" x2="28" y2="9" stroke="#1F1F1F" strokeWidth="2" />
+          <line y1="17" x2="28" y2="17" stroke="#1F1F1F" strokeWidth="2" />
         </svg>
       </button>
     </div>
