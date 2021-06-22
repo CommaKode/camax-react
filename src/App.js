@@ -1,4 +1,3 @@
-import './App.scss';
 // import RouteApp from './RouteApp';
 import { BrowserRouter as Router } from 'react-router-dom';
 // import NavMobile from './components/nav-bar/NavMobile';
