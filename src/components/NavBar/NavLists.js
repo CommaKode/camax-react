@@ -4,7 +4,7 @@ import MenuItems from './MenuItems';
 
 const NavLists = () => {
   return (
-    <ul className="nav-list">
+    <ul className="nav-list container">
       {MenuItems.map((item, index) => (
         <NavList
           url={item.url}

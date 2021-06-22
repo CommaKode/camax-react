@@ -1,0 +1,55 @@
+@import '../../scss/variables';
+@import '../../scss/_utilities.scss';
+
+// ?
+// ? Mobile top navbar styling
+// ?
+.navbar {
+  position: relative;
+  @include between();
+  span {
+    display: block;
+  }
+}
+.nav-logo svg {
+  width: 150px;
+  height: fit-content;
+}
+
+// *
+// * switching navbar icon colors to black and white
+// *
+.color-switch {
+  fill: color(black);
+}
+
+// ?
+// ? syling nav list
+// ?
+.nav-list {
+  background-color: color(black);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  @include between(column);
+  padding-top: $list-padding;
+  padding-bottom: $list-padding;
+  li {
+    @include between(row-reverse);
+    width: 100%;
+    position: relative;
+    &:not(:last-of-type)::after {
+      @include pseudo();
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      background-color: color(white, dark);
+    }
+  }
+
+  // mobile links
+  .nav-links {
+    padding: $link-padding;
+    color: color(white);
+  }
+}
