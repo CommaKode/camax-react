@@ -5,7 +5,7 @@ import logo from '../../Images/icons/logo.svg';
 import cart from '../../Images/icons/nav-cart.svg';
 import hamMenu from '../../Images/icons/hambergurMenu.svg';
 
-import NavList from './NavLists';
+import NavLists from './NavLists';
 
 const NavBar = (props) => {
   const { variant, ...rest } = props;
@@ -20,7 +20,7 @@ const NavBar = (props) => {
       <button className="nav-menu">
         <img src={hamMenu} alt="menu" />
       </button>
-      <NavList />
+      <NavLists />
     </nav>
   );
 };
