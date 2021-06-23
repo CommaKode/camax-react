@@ -1,9 +1,9 @@
 @import '../../scss/variables';
 @import '../../scss/_utilities.scss';
 
-// ?
-// ? Mobile top navbar styling
-// ?
+// *
+// * Mobile top navbar styling
+// *
 .navbar {
   position: relative;
   @include between();
@@ -17,15 +17,15 @@
 }
 
 // *
-// * switching navbar icon colors to black and white
+// * switching top navbar icon colors to black and white
 // *
 .color-switch {
   fill: color(black);
 }
 
-// ?
-// ? syling nav list
-// ?
+// *
+// * syling mobile nav list
+// *
 .nav-list {
   background-color: color(black);
   position: absolute;
@@ -35,7 +35,6 @@
   padding-top: $list-padding;
   padding-bottom: $list-padding;
   li {
-    @include between(row-reverse);
     width: 100%;
     position: relative;
     &:not(:last-of-type)::after {
@@ -46,10 +45,24 @@
       background-color: color(white, dark);
     }
   }
+}
 
-  // mobile links
-  .nav-links {
-    padding: $link-padding;
-    color: color(white);
+// ? mobile nav links & buttons
+.nav-list > li > * {
+  padding: $link-padding;
+  color: color(white);
+  font-size: 1.6rem;
+  width: 100%;
+  @include between(row-reverse);
+  transition: $main-transition;
+
+  // ? hover for nav links and buttons
+  &:hover {
+    background-color: color(black, light);
   }
+}
+
+// ? mobile nav buttons
+.nav-btn {
+  background-color: transparent;
 }

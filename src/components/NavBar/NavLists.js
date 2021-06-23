@@ -10,6 +10,7 @@ const NavLists = () => {
           url={item.url}
           cName={item.cName}
           title={item.title}
+          el={item.el}
           key={index}
         />
       ))}

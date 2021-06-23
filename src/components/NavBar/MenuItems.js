@@ -1,23 +1,27 @@
 const MenuItems = [
   {
-    title: 'home',
+    title: 'خانه',
     url: '/',
     cName: 'nav-links',
+    el: 'link',
   },
   {
-    title: 'home',
+    title: 'روشنایی',
     url: '/',
     cName: 'nav-links',
+    el: 'link',
   },
   {
-    title: 'home',
+    title: 'محصولات',
     url: '/',
-    cName: 'nav-links',
+    cName: 'nav-btn',
+    el: 'button',
   },
   {
-    title: 'home',
+    title: 'خدمات',
     url: '/',
-    cName: 'nav-links',
+    cName: 'nav-btn',
+    el: 'button',
   },
 ];
 
