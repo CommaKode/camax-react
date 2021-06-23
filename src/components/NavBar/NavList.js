@@ -1,8 +1,8 @@
 import React from 'react';
 
 const NavList = (props) => {
-  const { url, cName, title, el, ...rest } = props;
-  return el === 'button' ? (
+  const { url, cName, title, options, ...rest } = props;
+  return options !== undefined ? (
     <li>
       <button className={cName} {...rest}>
         <span>{title}</span>
@@ -22,6 +22,13 @@ const NavList = (props) => {
           </svg>
         </span>
       </button>
+      <ul className="nav-sub-list">
+        {options.map((option, index) => (
+          <li key={index}>
+            <a href={option.url}>{option.title}</a>
+          </li>
+        ))}
+      </ul>
     </li>
   ) : (
     <li>
