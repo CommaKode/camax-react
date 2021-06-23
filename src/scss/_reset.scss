@@ -28,6 +28,7 @@
   padding: 0;
 }
 html {
+  font-family: yekan;
   font-weight: 400;
   font-size: 62.5%;
   padding: 0;
@@ -36,7 +37,6 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: yekan;
   background-color: color(white);
   height: 100vh;
   width: 100vw;
@@ -50,11 +50,14 @@ a {
   display: block;
 }
 input {
+  font-family: yekan;
   outline: none;
   border: none;
 }
 button {
+  font-family: yekan;
   font-size: 1.6rem;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }

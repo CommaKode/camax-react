@@ -52,6 +52,7 @@
   padding: $link-padding;
   color: color(white);
   font-size: 1.6rem;
+  font-weight: 400;
   width: 100%;
   @include between(row-reverse);
   transition: $main-transition;
