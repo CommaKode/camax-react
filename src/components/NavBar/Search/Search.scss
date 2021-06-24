@@ -1,0 +1,45 @@
+@import '../../../scss/variables';
+
+.search-inp {
+  position: relative;
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  button {
+    @include box(25px);
+    transform: translate(50%, 25%);
+    svg {
+      @include box(25px);
+      path {
+        transition: $main-transition;
+        fill: color(secondary, light);
+      }
+    }
+    &:hover svg path {
+      fill: color(secondary);
+    }
+  }
+
+  input {
+    background-color: color(white);
+    padding: $serach-m-padding;
+    border-radius: $search-m-radius;
+    font-size: 1.4rem;
+    text-align: right;
+    color: color(black);
+  }
+}
+
+.search-mobile {
+  input {
+    width: 100%;
+  }
+}
+.search-desktop {
+  input {
+    width: 18em;
+  }
+}

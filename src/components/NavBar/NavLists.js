@@ -4,17 +4,19 @@ import MenuItems from './MenuItems';
 
 const NavLists = () => {
   return (
-    <ul className="nav-list container">
-      {MenuItems.map((item, index) => (
-        <NavList
-          url={item.url}
-          cName={item.cName}
-          title={item.title}
-          options={item.options}
-          key={index}
-        />
-      ))}
-    </ul>
+    <div className="nav-list-container">
+      <ul className="nav-list container">
+        {MenuItems.map((item, index) => (
+          <NavList
+            url={item.url}
+            cName={item.cName}
+            title={item.title}
+            options={item.options}
+            key={index}
+          />
+        ))}
+      </ul>
+    </div>
   );
 };
 

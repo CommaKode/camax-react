@@ -4,9 +4,9 @@ import hamMenu from '../../Images/icons/hambergurMenu.svg';
 import NavLists from './NavLists';
 
 const NavBar = (props) => {
-  const { variant, ...rest } = props;
+  const { ...rest } = props;
   return (
-    <nav className={`navbar container ` + variant} {...rest}>
+    <nav className={`navbar container `} {...rest}>
       <a href="/cart" className="nav-cart">
         <span>
           <svg

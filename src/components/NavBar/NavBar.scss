@@ -24,7 +24,7 @@
 }
 
 // *
-// * syling mobile nav list
+// * syling mobile navbar list
 // *
 .nav-list {
   background-color: color(black);
@@ -47,7 +47,7 @@
   }
 }
 
-// ? mobile nav links & buttons
+// * mobile navbar list > links & buttons
 .nav-links {
   padding: $link-padding;
   color: color(white);
@@ -66,6 +66,7 @@
 // ? mobile nav sub list (options)
 .nav-sub-list {
   width: 100%;
+  display: none;
 
   // * seperator line in sub nav list
   li {
