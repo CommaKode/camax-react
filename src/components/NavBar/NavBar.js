@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './NavBar.scss';
-import hamMenu from '../../Images/icons/hambergurMenu.svg';
+import HamButton from './HamButton/HamButton';
 import NavLists from './NavLists';
 
 const NavBar = (props) => {
@@ -35,7 +35,7 @@ const NavBar = (props) => {
     <nav className="header" {...rest}>
       <div className={`navbar container ` + bg}>
         <button className="nav-menu" onClick={clickHandler}>
-          <img src={hamMenu} alt="menu" />
+          <HamButton />
         </button>
         <a href="/home" className="nav-logo">
           <span>

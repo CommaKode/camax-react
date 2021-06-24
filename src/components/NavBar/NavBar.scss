@@ -20,6 +20,7 @@
 .nav-logo svg {
   width: 150px;
   height: 50px;
+  transform: translateX(12%);
 }
 
 // *
@@ -33,7 +34,7 @@
   left: 0;
   right: 0;
   z-index: -1;
-  transition: $main-transition;
+  transition: $secondary-transition;
 }
 .nav-list {
   @include between(column);
@@ -121,6 +122,12 @@
 }
 .icon-color-switch-c {
   fill: color(white);
+}
+.stroke-uc {
+  stroke: color(black);
+}
+.sroke-c {
+  stroke: color(white);
 }
 
 // * ham menu clicked -> nav lists open
