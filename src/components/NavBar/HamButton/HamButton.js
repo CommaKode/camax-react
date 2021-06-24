@@ -5,7 +5,7 @@ import './HamButton.scss';
 const HamButton = (props) => {
   const { clk } = props;
   const [active, setActive] = useState('');
-  const toggle = () => {
+  const clickHandler = () => {
     switch (active) {
       case 'active':
         setActive('');
@@ -14,15 +14,14 @@ const HamButton = (props) => {
         setActive('active');
     }
   };
-  const clickHandler = () => {
-    toggle();
-    clk();
-  };
   return (
     <svg
       className={`ham hamRotate ham1 ${active}`}
       viewBox="0 0 100 100"
-      onClick={clickHandler}
+      onClick={() => {
+        clickHandler();
+        clk();
+      }}
     >
       <path
         className="line top"
