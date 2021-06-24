@@ -1,3 +1,4 @@
+@import './variables';
 //
 // imports
 //
@@ -51,7 +52,9 @@ a {
   text-decoration: none;
   display: block;
 }
-span {
+span,
+svg,
+img {
   display: block;
 }
 input {

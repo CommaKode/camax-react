@@ -3,11 +3,12 @@ import NavList from './NavList';
 import MenuItems from './MenuItems';
 import Search from './Search/Search';
 
-const NavLists = () => {
+const NavLists = (props) => {
+  const { list, ...rest } = props;
   return (
-    <div className="nav-list-container">
+    <div className={`nav-list-container ` + list} {...rest}>
       <ul className="nav-list container">
-        <Search />
+        <Search variant="search-mobile" />
         {MenuItems.map((item, index) => (
           <NavList
             url={item.url}

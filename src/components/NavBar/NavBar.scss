@@ -4,23 +4,22 @@
 // *
 // * Mobile top navbar styling
 // *
-.navbar {
+.header {
   position: relative;
+  width: 100%;
+}
+.navbar {
   @include between();
+  z-index: 1000;
+  transition: $main-transition;
+  height: 4.5em;
   span {
     display: block;
   }
 }
 .nav-logo svg {
   width: 150px;
-  height: fit-content;
-}
-
-// *
-// * switching top navbar icon colors to black and white
-// *
-.color-switch {
-  fill: color(black);
+  height: 50px;
 }
 
 // *
@@ -33,6 +32,8 @@
   top: 100%;
   left: 0;
   right: 0;
+  z-index: -1;
+  transition: $main-transition;
 }
 .nav-list {
   @include between(column);
@@ -95,4 +96,37 @@
       background-color: color(black, light);
     }
   }
+}
+
+// !
+// ! clicked classes
+// !
+
+// *
+// * ham menu click...
+// *
+// ? uc => unClicked & c => clicked
+
+// * top mobile nav background color
+.mobile-nav-bg-uc {
+  background-color: color(white, light);
+}
+.mobile-nav-bg-c {
+  background-color: color(black);
+}
+
+// * top mobile nav icons
+.icon-color-switch-uc {
+  fill: color(black);
+}
+.icon-color-switch-c {
+  fill: color(white);
+}
+
+// * ham menu clicked -> nav lists open
+.nav-list-uc {
+  transform: translateY(-150%);
+}
+.nav-list-c {
+  transform: translateY(0);
 }
