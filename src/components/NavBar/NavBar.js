@@ -32,9 +32,9 @@ const NavBar = (props) => {
     <nav className="header" {...rest}>
       <div className={`navbar container `}>
         <span className={`before ${list}`}></span>
-        <button className="nav-menu" onClick={clickHandler}>
-          <HamButton />
-        </button>
+        {/* <button onClick={clickHandler}> */}
+        <HamButton clk={clickHandler} />
+        {/* </button> */}
         <a href="/home" className="nav-logo">
           <span>
             <svg

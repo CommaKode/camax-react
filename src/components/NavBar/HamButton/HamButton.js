@@ -2,9 +2,10 @@ import React from 'react';
 import { useState } from 'react';
 import './HamButton.scss';
 
-const HamButton = () => {
+const HamButton = (props) => {
+  const { clk } = props;
   const [active, setActive] = useState('');
-  const clickHandler = () => {
+  const toggle = () => {
     switch (active) {
       case 'active':
         setActive('');
@@ -12,6 +13,10 @@ const HamButton = () => {
       default:
         setActive('active');
     }
+  };
+  const clickHandler = () => {
+    toggle();
+    clk();
   };
   return (
     <svg
