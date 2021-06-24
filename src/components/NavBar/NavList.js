@@ -1,10 +1,28 @@
 import React from 'react';
+import { useState } from 'react';
 
 const NavList = (props) => {
   const { url, cName, title, options, ...rest } = props;
+  const [click, setClick] = useState('sub-uc');
+  const [rotate, setRotate] = useState('arrow-uc');
+  const clickHandler = () => {
+    switch (click) {
+      case 'sub-uc':
+        setClick('sub-c');
+        setRotate('arrow-c');
+        break;
+      default:
+        setClick('sub-uc');
+        setRotate('arrow-uc');
+    }
+  };
   return options !== undefined ? (
     <li>
-      <button className={cName} {...rest}>
+      <button
+        className={`sub-btn ${rotate} ${cName}`}
+        onClick={clickHandler}
+        {...rest}
+      >
         <span>{title}</span>
         <span>
           <svg
@@ -22,7 +40,7 @@ const NavList = (props) => {
           </svg>
         </span>
       </button>
-      <ul className="nav-sub-list">
+      <ul className={`nav-sub-list ${click}`}>
         {options.map((option, index) => (
           <li key={index}>
             <a href={option.url}>{option.title}</a>

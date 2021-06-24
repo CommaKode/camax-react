@@ -92,7 +92,6 @@
 // ? mobile nav sub list (options)
 .nav-sub-list {
   width: 100%;
-  display: none;
 
   // * seperator line in sub nav list
   li {
@@ -117,6 +116,9 @@
       background-color: color(black, light);
     }
   }
+}
+.sub-btn span svg {
+  transition: $main-transition;
 }
 
 // !
@@ -148,4 +150,20 @@
 }
 .nav-list-c {
   transform: translateX(0);
+}
+
+// * nav sub list
+.sub-uc {
+  display: none;
+}
+.sub-c {
+  display: block;
+}
+
+// * sub nav icon (arrow)
+.arrow-uc span svg {
+  transform: rotateZ(90deg);
+}
+.arrow-c span svg {
+  transform: rotateZ(0);
 }
