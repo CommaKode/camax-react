@@ -2,13 +2,15 @@
 
 .search-inp {
   position: relative;
-  > * {
+  width: fit-content;
+  height: fit-content;
+  width: 100%;
+  margin: $element-margin 0;
+
+  button {
     position: absolute;
     top: 0;
     left: 0;
-  }
-
-  button {
     @include box(25px);
     transform: translate(50%, 25%);
     svg {
@@ -24,6 +26,7 @@
   }
 
   input {
+    width: 100%;
     background-color: color(white);
     padding: $serach-m-padding;
     border-radius: $search-m-radius;
@@ -33,13 +36,6 @@
   }
 }
 
-.search-mobile {
-  input {
-    width: 100%;
-  }
-}
 .search-desktop {
-  input {
-    width: 18em;
-  }
+  width: 18em !important;
 }

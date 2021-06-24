@@ -26,11 +26,15 @@
 // *
 // * syling mobile navbar list
 // *
-.nav-list {
-  background-color: color(black);
+.nav-list-container {
   position: absolute;
+  width: 100%;
+  background-color: color(black);
   top: 100%;
+  left: 0;
   right: 0;
+}
+.nav-list {
   @include between(column);
   padding-top: $list-padding;
   padding-bottom: $list-padding;
@@ -54,7 +58,7 @@
   font-size: 1.6rem;
   font-weight: 400;
   width: 100%;
-  @include between(row-reverse);
+  @include between();
   transition: $main-transition;
 
   // ? hover for nav links and buttons
@@ -83,7 +87,7 @@
 
   a {
     color: color(white);
-    @include between(row-reverse);
+    @include between();
     padding: $link-padding;
     transition: $main-transition;
 

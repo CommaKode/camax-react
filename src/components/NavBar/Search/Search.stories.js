@@ -8,9 +8,6 @@ export default {
 const Template = (args) => <Search {...args} />;
 
 export const Mobile = Template.bind({});
-Mobile.args = {
-  variant: 'search-mobile',
-};
 
 export const Desktop = Template.bind({});
 Desktop.args = {
