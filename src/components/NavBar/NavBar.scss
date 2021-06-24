@@ -13,6 +13,18 @@
   z-index: 1000;
   transition: $main-transition;
   height: 4.5em;
+  position: relative;
+  background-color: color(white, light);
+
+  .before {
+    @include pseudo();
+    left: 0;
+    width: 100%;
+    background-color: color(black);
+    height: 100%;
+    z-index: -1;
+    transition: $secondary-transition;
+  }
   span {
     display: block;
   }
@@ -22,7 +34,14 @@
   height: 50px;
   transform: translateX(12%);
 }
-
+.nav-cart svg {
+  width: 27px;
+  height: 27px;
+  path {
+    transition: $main-transition;
+    transition-delay: 0.1s;
+  }
+}
 // *
 // * syling mobile navbar list
 // *
@@ -33,13 +52,14 @@
   top: 100%;
   left: 0;
   right: 0;
-  z-index: -1;
+  // z-index: -1;
   transition: $secondary-transition;
 }
 .nav-list {
   @include between(column);
   padding-top: $list-padding;
   padding-bottom: $list-padding;
+
   > li {
     width: 100%;
     position: relative;
@@ -108,14 +128,6 @@
 // *
 // ? uc => unClicked & c => clicked
 
-// * top mobile nav background color
-.mobile-nav-bg-uc {
-  background-color: color(white, light);
-}
-.mobile-nav-bg-c {
-  background-color: color(black);
-}
-
 // * top mobile nav icons
 .icon-color-switch-uc {
   fill: color(black);
@@ -132,8 +144,8 @@
 
 // * ham menu clicked -> nav lists open
 .nav-list-uc {
-  transform: translateY(-150%);
+  transform: translateX(100%);
 }
 .nav-list-c {
-  transform: translateY(0);
+  transform: translateX(0);
 }

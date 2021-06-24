@@ -8,7 +8,6 @@ const NavBar = (props) => {
   const [click, setClick] = useState('unClicked');
   const [cNames, setCNames] = useState({
     icons: 'icon-color-switch-uc',
-    bg: 'mobile-nav-bg-uc',
     list: 'nav-list-uc',
   });
   const clickHandler = () => {
@@ -17,7 +16,6 @@ const NavBar = (props) => {
         setClick('clicked');
         setCNames({
           icons: 'icon-color-switch-c',
-          bg: 'mobile-nav-bg-c',
           list: 'nav-list-c',
         });
         break;
@@ -25,15 +23,15 @@ const NavBar = (props) => {
         setClick('unClicked');
         setCNames({
           icons: 'icon-color-switch-uc',
-          bg: 'mobile-nav-bg-uc',
           list: 'nav-list-uc',
         });
     }
   };
-  const { icons, bg, list } = cNames;
+  const { icons, list } = cNames;
   return (
     <nav className="header" {...rest}>
-      <div className={`navbar container ` + bg}>
+      <div className={`navbar container `}>
+        <span className={`before ${list}`}></span>
         <button className="nav-menu" onClick={clickHandler}>
           <HamButton />
         </button>
@@ -78,8 +76,6 @@ const NavBar = (props) => {
         <a href="/cart" className="nav-cart">
           <span>
             <svg
-              width="22"
-              height="28"
               viewBox="0 0 22 28"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

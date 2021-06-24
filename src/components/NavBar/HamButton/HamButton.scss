@@ -20,6 +20,7 @@
   stroke: color(black);
   stroke-width: 3;
   stroke-linecap: round;
+  transition: $main-transition;
 }
 .ham1 .top {
   stroke-dasharray: 40 139;
