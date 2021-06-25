@@ -89,9 +89,13 @@
   }
 }
 
+// ?
 // ? mobile nav sub list (options)
+// ?
 .nav-sub-list {
   width: 100%;
+  transition: $secondary-transition;
+  transform-origin: top;
 
   // * seperator line in sub nav list
   li {
@@ -154,10 +158,12 @@
 
 // * nav sub list
 .sub-uc {
-  display: none;
+  transform: translateX(120%);
+  height: 0;
 }
 .sub-c {
-  display: block;
+  height: 100%;
+  transform: translateX(0);
 }
 
 // * sub nav icon (arrow)
