@@ -93,22 +93,23 @@
 // ? mobile nav sub list (options)
 // ?
 .nav-sub-list {
-  width: 100%;
+  width: 95%;
+  margin-right: 5%;
   transition: $secondary-transition;
   transform-origin: top;
 
   // * seperator line in sub nav list
-  li {
-    position: relative;
-    &::after {
-      @include pseudo();
-      width: 100%;
-      height: 1px;
-      top: 0;
-      left: 0;
-      background-color: color(black, light);
-    }
-  }
+  // li {
+  //   position: relative;
+  //   &::after {
+  //     @include pseudo();
+  //     width: 105%;
+  //     height: 1px;
+  //     top: 0;
+  //     left: 0;
+  //     background-color: color(black, light);
+  //   }
+  // }
 
   a {
     color: color(white);
