@@ -54,6 +54,7 @@
   right: 0;
   // z-index: -1;
   transition: $secondary-transition;
+  min-height: calc(100vh - 4.5em);
 }
 .nav-list {
   @include between(column);
