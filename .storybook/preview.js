@@ -21,6 +21,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  layout: 'fullscreen',
 };
 
 addDecorator((storyFn, context) => withConsole()(storyFn)(context));
