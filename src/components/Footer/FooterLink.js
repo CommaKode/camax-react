@@ -6,9 +6,9 @@ const FooterLink = (props) => {
     <li>
       <button>{title}</button>
       <ul>
-        {options.map((option) => {
+        {options.map((option, index) => {
           return (
-            <li>
+            <li key={index}>
               <a href={option.url}>{option.title}</a>
             </li>
           );

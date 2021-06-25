@@ -5,8 +5,8 @@ import FooterLink from './FooterLink';
 const FooterLinks = () => {
   return (
     <div className={`footer-links`}>
-      {FooterListItems.map((item) => (
-        <FooterLink title={item.title} options={item.options} />
+      {FooterListItems.map((item, index) => (
+        <FooterLink title={item.title} options={item.options} key={index} />
       ))}
     </div>
   );
