@@ -99,17 +99,17 @@
   transform-origin: top;
 
   // * seperator line in sub nav list
-  // li {
-  //   position: relative;
-  //   &::after {
-  //     @include pseudo();
-  //     width: 105%;
-  //     height: 1px;
-  //     top: 0;
-  //     left: 0;
-  //     background-color: color(black, light);
-  //   }
-  // }
+  li {
+    position: relative;
+    &::after {
+      @include pseudo();
+      width: 105%;
+      height: 1px;
+      top: 0;
+      left: 0;
+      background-color: color(black, light);
+    }
+  }
 
   a {
     color: color(white);
