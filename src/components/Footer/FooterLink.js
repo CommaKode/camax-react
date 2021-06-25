@@ -3,7 +3,7 @@ import React from 'react';
 const FooterLink = (props) => {
   const { title, options } = props;
   return (
-    <li>
+    <li className={`footer-link`}>
       <button>{title}</button>
       <ul>
         {options.map((option, index) => {

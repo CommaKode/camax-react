@@ -1,0 +1,13 @@
+@import '../../scss/variables';
+@import '../../scss/utilities';
+
+// ? footer itself
+.page-footer {
+  width: 100%;
+  position: relative;
+  background-color: color(secondary, dark);
+  padding-top: 1.5em;
+  border-radius: 2em 2em 0 0;
+}
+
+// ? footer link => each li tags in footer linksss
