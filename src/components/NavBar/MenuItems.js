@@ -4,36 +4,49 @@ const MenuItems = [
     url: '/',
     cName: 'nav-links',
   },
+
   {
-    title: 'روشنایی',
+    title: 'تماس با ما',
     url: '/',
     cName: 'nav-links',
   },
+
   {
     title: 'محصولات',
     url: '/',
     cName: 'nav-links',
     options: [
       {
-        title: 'test1',
+        title: 'پنل',
         url: '/test1',
       },
       {
-        title: 'test2',
+        title: 'مونیتور',
         url: '/test2',
       },
     ],
   },
+
   {
-    title: 'خدمات',
+    title: 'خدمات پس از فروش',
     url: '/',
     cName: 'nav-links',
     options: [
       {
-        title: 'test1',
+        title: 'گارانتی',
+        url: '/test2',
+      },
+      {
+        title: 'تعمیرات',
         url: '/test2',
       },
     ],
+  },
+
+  {
+    title: 'روشنایی',
+    url: '/',
+    cName: 'nav-links',
   },
 ];
 
