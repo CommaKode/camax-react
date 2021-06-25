@@ -125,6 +125,19 @@
   transition: $main-transition;
 }
 
+// ?
+// ? mobile sign up button
+// ?
+.signup-btn {
+  color: color(white, dark);
+  margin-top: $element-margin;
+  font-size: 1.4rem;
+  &:hover {
+    text-decoration: underline;
+    color: color(white);
+  }
+}
+
 // !
 // ! clicked classes
 // !

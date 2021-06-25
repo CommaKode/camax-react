@@ -2,6 +2,7 @@ import React from 'react';
 import NavList from './NavList';
 import MenuItems from './MenuItems';
 import Search from './Search/Search';
+import MobileSignBtn from './MobileSignBtn';
 
 const NavLists = (props) => {
   const { list, ...rest } = props;
@@ -18,6 +19,10 @@ const NavLists = (props) => {
             key={index}
           />
         ))}
+        <MobileSignBtn title="ورود به حساب کاربری" />
+        <a className="signup-btn" href="/signup">
+          حساب کاربری ندارم
+        </a>
       </ul>
     </div>
   );

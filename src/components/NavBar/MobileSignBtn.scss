@@ -1,0 +1,16 @@
+@import '../../scss/variables';
+
+.mobile-sign-btn {
+  border: solid 1px color(white);
+  width: 100%;
+  padding: $m-btn-padding 0;
+  margin-top: $element-margin;
+  border-radius: $search-m-radius;
+  transition: $main-transition;
+  span {
+    color: color(white);
+  }
+  &:hover {
+    background-color: color(black, light);
+  }
+}

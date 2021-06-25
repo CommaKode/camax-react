@@ -1,14 +1,16 @@
 // !
 // ! paddings
 // !
+// * mobile top & bottom button padding
+$m-btn-padding: 0.6em;
 $container-padding: 0 1em;
 // * whole mobile nav list padding
 $list-padding: 1em;
 // * a and button tag paddings in mobile nav list
-$link-padding: 0.7em 0;
+$link-padding: $m-btn-padding 0;
 
 // * search input padding
-$serach-m-padding: 0.5em 1em 0.5em 3.5em;
+$serach-m-padding: $m-btn-padding 1em $m-btn-padding 3.5em;
 
 // !
 // ! margins
@@ -19,7 +21,7 @@ $element-margin: 1em;
 // ! radius
 // !
 // * search input radius
-$search-m-radius: 1em;
+$search-m-radius: 5em;
 
 // !
 // ! transition
