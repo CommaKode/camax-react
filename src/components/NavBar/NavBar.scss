@@ -106,21 +106,3 @@
 .nav-list-c {
   transform: translateX(0);
 }
-
-// * nav sub list
-.sub-uc {
-  transform: translateX(120%);
-  height: 0;
-}
-.sub-c {
-  height: 100%;
-  transform: translateX(0);
-}
-
-// * sub nav icon (arrow)
-.arrow-uc span svg {
-  transform: rotateZ(90deg);
-}
-.arrow-c span svg {
-  transform: rotateZ(0);
-}

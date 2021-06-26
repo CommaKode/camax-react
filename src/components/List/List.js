@@ -1,9 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
-const NavList = (props) => {
+
+const List = (props) => {
   const { url, cName, title, options, ...rest } = props;
+
   const [click, setClick] = useState('sub-uc');
   const [rotate, setRotate] = useState('arrow-uc');
+
   const clickHandler = () => {
     switch (click) {
       case 'sub-uc':
@@ -15,6 +18,7 @@ const NavList = (props) => {
         setRotate('arrow-uc');
     }
   };
+
   return options !== undefined ? (
     <li className="list">
       <button
@@ -56,4 +60,4 @@ const NavList = (props) => {
   );
 };
 
-export default NavList;
+export default List;

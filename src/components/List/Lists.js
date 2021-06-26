@@ -1,9 +1,9 @@
 import React from 'react';
-import NavList from './NavList';
-import MenuItems from './MenuItems';
-import './NavList.scss';
+import NavList from './List';
+import MenuItems from '../NavBar/MenuItems';
+import './Lists.scss';
 
-const NavLists = () => {
+const Lists = () => {
   return (
     <ul className="nav-list">
       {MenuItems.map((item, index) => (
@@ -19,4 +19,4 @@ const NavLists = () => {
   );
 };
 
-export default NavLists;
+export default Lists;
