@@ -45,91 +45,27 @@
 // *
 // * syling mobile navbar list
 // *
-.nav-list-container {
+.nav-menu {
   position: absolute;
   width: 100%;
   background-color: color(black);
   top: 100%;
   left: 0;
   right: 0;
-  // z-index: -1;
   transition: $secondary-transition;
   min-height: calc(100vh - 4.5em);
-}
-.nav-list {
-  @include between(column);
-  padding-top: $list-padding;
-  padding-bottom: $list-padding;
-
-  > li {
-    width: 100%;
-    position: relative;
-    &:not(:last-of-type)::after {
-      @include pseudo();
-      width: 100%;
-      height: 1px;
-      bottom: 0;
-      background-color: color(white, dark);
-    }
+  > div {
+    @include between(column);
   }
-}
-
-// * mobile navbar list > links & buttons
-.nav-links {
-  padding: $link-padding;
-  color: color(white);
-  font-size: 1.6rem;
-  font-weight: 400;
-  width: 100%;
-  @include between();
-  transition: $main-transition;
-
-  // ? hover for nav links and buttons
-  &:hover {
-    background-color: color(black, light);
-  }
-}
-
-// ?
-// ? mobile nav sub list (options)
-// ?
-.nav-sub-list {
-  width: 95%;
-  margin-right: 5%;
-  transition: $secondary-transition;
-  transform-origin: top;
-
-  // * seperator line in sub nav list
-  li {
-    position: relative;
-    &::after {
-      @include pseudo();
-      width: 105%;
-      height: 1px;
-      top: 0;
-      left: 0;
-      background-color: color(black, light);
-    }
-  }
-
-  a {
-    color: color(white);
-    @include between();
-    padding: $link-padding;
-    transition: $main-transition;
-
-    &:hover {
-      background-color: color(black, light);
-    }
-  }
-}
-.sub-btn span svg {
-  transition: $main-transition;
 }
 
 // ?
 // ? mobile sign up button
 // ?
+.signup {
+  width: 100%;
+  text-align: center;
+}
 .signup-btn {
   color: color(white, dark);
   margin-top: $element-margin;

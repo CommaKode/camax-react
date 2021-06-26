@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './NavBar.scss';
 import HamButton from './HamButton/HamButton';
-import NavLists from './NavLists';
+import NavMenu from './NavMenu';
 
 const NavBar = (props) => {
   const { ...rest } = props;
@@ -87,7 +87,7 @@ const NavBar = (props) => {
           </span>
         </a>
       </div>
-      <NavLists list={list} />
+      <NavMenu list={list} />
     </nav>
   );
 };

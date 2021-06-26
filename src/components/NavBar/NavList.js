@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-
 const NavList = (props) => {
   const { url, cName, title, options, ...rest } = props;
   const [click, setClick] = useState('sub-uc');
@@ -17,7 +16,7 @@ const NavList = (props) => {
     }
   };
   return options !== undefined ? (
-    <li>
+    <li className="list">
       <button
         className={`sub-btn ${rotate} ${cName}`}
         onClick={clickHandler}
@@ -49,7 +48,7 @@ const NavList = (props) => {
       </ul>
     </li>
   ) : (
-    <li>
+    <li className="list">
       <a href={url} className={cName} {...rest}>
         {title}
       </a>
