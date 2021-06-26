@@ -1,0 +1,46 @@
+@import '../../scss/variables';
+
+span {
+  color: color(white);
+  cursor: pointer;
+}
+
+.copyTitle {
+  width: fit-content;
+  position: relative;
+  &:hover .tooltip {
+    opacity: 1;
+  }
+}
+.copy-text {
+  width: fit-content;
+}
+.tooltip {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  background-color: color(secondary);
+  color: color(white);
+  padding: 0.5em 1em;
+  white-space: nowrap;
+  border-radius: 1em;
+  opacity: 0;
+  pointer-events: none;
+  transition: $main-transition;
+
+  &::before {
+    @include pseudo();
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid 8px transparent;
+    border-bottom: solid 12px color(secondary);
+    border-top: none;
+  }
+}
+
+.dark .copy-text {
+  color: color(black);
+}
