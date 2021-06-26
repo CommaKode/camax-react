@@ -19,7 +19,7 @@ const FooterAddress = () => {
         </span>
       </div>
       <div className="footer-texts">
-        <span>آدرس</span>
+        <span>آدرس فلان</span>
         <Tooltip cName="ltr" text="+98 21 768876876" />
         <span className="ltr">@Camax</span>
       </div>

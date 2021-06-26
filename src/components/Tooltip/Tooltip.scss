@@ -10,6 +10,7 @@ span {
   position: relative;
   &:hover .tooltip {
     opacity: 1;
+    visibility: visible;
   }
 }
 .copy-text {
@@ -26,9 +27,10 @@ span {
   padding: 0.5em 1em;
   white-space: nowrap;
   border-radius: 1em;
-  opacity: 0;
   pointer-events: none;
   transition: $main-transition;
+  opacity: 0;
+  z-index: 10;
 
   &::before {
     @include pseudo();
