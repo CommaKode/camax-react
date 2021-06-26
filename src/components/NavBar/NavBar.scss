@@ -42,6 +42,7 @@
     transition-delay: 0.1s;
   }
 }
+
 // *
 // * syling mobile navbar list
 // *
@@ -62,10 +63,6 @@
 // ?
 // ? mobile sign up button
 // ?
-.signup {
-  width: 100%;
-  text-align: center;
-}
 .signup-btn {
   color: color(white, dark);
   margin-top: $element-margin;
