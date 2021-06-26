@@ -1,16 +1,20 @@
 // !
 // ! paddings
 // !
-// * mobile top & bottom button padding
+// * mobile button padding (for top & bottom not sides)
 $m-btn-padding: 0.6em;
+
+// * mobile container padding
 $container-padding: 0 1em;
-// * whole mobile nav list padding
+
+// * whole mobile nav menu padding
 $list-padding: 1em;
+
 // * a and button tag paddings in mobile nav list
 $link-padding: $m-btn-padding 0;
 
 // * search input padding
-$serach-m-padding: $m-btn-padding 1em $m-btn-padding 3.5em;
+$serach-m-padding: $m-btn-padding 1.5em $m-btn-padding 4em;
 
 // !
 // ! margins

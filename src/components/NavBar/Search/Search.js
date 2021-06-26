@@ -5,7 +5,7 @@ const Search = (props) => {
   const { variant, ...rest } = props;
   return (
     <div className={`search-inp ` + variant} {...rest}>
-      <input type="text" />
+      <input type="text" placeholder="جست و جو" />
       <button>
         <svg viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
