@@ -1,6 +1,6 @@
 @import '../../scss/variables';
 
-.nav-list {
+.ul-list {
   padding-top: $list-padding;
   padding-bottom: $list-padding;
   width: 100%;
@@ -18,7 +18,7 @@
 }
 
 // * mobile navbar list > links & buttons
-.nav-links {
+.main-links {
   padding: $link-padding;
   color: color(white);
   font-size: 1.6rem;
@@ -36,7 +36,7 @@
 // ?
 // ? mobile nav sub list (options)
 // ?
-.nav-sub-list {
+.sub-list {
   width: 95%;
   margin-right: 5%;
   transition: $secondary-transition;

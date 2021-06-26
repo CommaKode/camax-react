@@ -1,15 +1,16 @@
 import React from 'react';
-import NavList from './List';
-import MenuItems from '../NavBar/MenuItems';
+import List from './List';
 import './Lists.scss';
 
-const Lists = () => {
+const Lists = (props) => {
+  const { items } = props;
+
   return (
-    <ul className="nav-list">
-      {MenuItems.map((item, index) => (
-        <NavList
+    <ul className="ul-list">
+      {items.map((item, index) => (
+        <List
+          cName="main-links"
           url={item.url}
-          cName={item.cName}
           title={item.title}
           options={item.options}
           key={index}

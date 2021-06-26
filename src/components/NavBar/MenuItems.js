@@ -2,19 +2,16 @@ const MenuItems = [
   {
     title: 'خانه',
     url: '/',
-    cName: 'nav-links',
   },
 
   {
     title: 'تماس با ما',
     url: '/',
-    cName: 'nav-links',
   },
 
   {
     title: 'محصولات',
     url: '/',
-    cName: 'nav-links',
     options: [
       {
         title: 'پنل',
@@ -30,7 +27,6 @@ const MenuItems = [
   {
     title: 'خدمات پس از فروش',
     url: '/',
-    cName: 'nav-links',
     options: [
       {
         title: 'گارانتی',
@@ -46,7 +42,6 @@ const MenuItems = [
   {
     title: 'روشنایی',
     url: '/',
-    cName: 'nav-links',
   },
 ];
 

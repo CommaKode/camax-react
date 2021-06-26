@@ -1,11 +1,14 @@
 import React from 'react';
 import './Footer.scss';
-import FooterLinks from './FooterLinks';
+import Links from '../List/Lists';
+import FooterItems from './FooterItems';
 
 const Footer = () => {
   return (
     <footer className={`page-footer`}>
-      <FooterLinks />
+      <div className="container">
+        <Links items={FooterItems} />
+      </div>
     </footer>
   );
 };

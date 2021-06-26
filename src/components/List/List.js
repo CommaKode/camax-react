@@ -43,7 +43,7 @@ const List = (props) => {
           </svg>
         </span>
       </button>
-      <ul className={`nav-sub-list ${click}`}>
+      <ul className={`sub-list ${click}`}>
         {options.map((option, index) => (
           <li key={index}>
             <a href={option.url}>{option.title}</a>
