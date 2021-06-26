@@ -48,6 +48,7 @@
 // *
 .nav-menu {
   position: absolute;
+  z-index: 1000;
   width: 100%;
   background-color: color(black);
   top: 100%;
