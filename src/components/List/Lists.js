@@ -3,10 +3,10 @@ import List from './List';
 import './Lists.scss';
 
 const Lists = (props) => {
-  const { items } = props;
+  const { items, cName, ...rest } = props;
 
   return (
-    <ul className="ul-list">
+    <ul className={`ul-list ${cName}`} {...rest}>
       {items.map((item, index) => (
         <List
           cName="main-links"

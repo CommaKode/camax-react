@@ -5,25 +5,6 @@
   padding: $container-padding;
 }
 
-// classes for toggling width with butttons
-
-.list-off {
-  display: none;
-}
-.list-on {
-  display: block;
-}
-
-.svg-fill-white {
-  fill: color(white);
-}
-.svg-fill-black {
-  fill: color(black);
-}
-
-.bg-white {
-  background-color: color(white, light);
-}
-.bg-black {
-  background-color: color(black);
+.ltr {
+  direction: ltr;
 }
