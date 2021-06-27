@@ -1,0 +1,33 @@
+@import '../../scss/variables';
+
+.btn {
+  @include between();
+  padding: $btn-padding;
+  border-radius: $btn-radius;
+
+  .btn-icon {
+    margin-right: 1em;
+  }
+}
+
+// ? variants
+.btn-primary {
+  background-color: color(primary, light);
+  color: color(white);
+}
+
+.btn-secondary {
+  border: solid 1px color(primary);
+  color: color(secondary);
+  .btn-icon svg path {
+    fill: color(secondary);
+  }
+}
+
+.btn-card {
+  background-color: color(primary, light);
+  color: color(white);
+  .btn-icon svg path {
+    fill: color(white);
+  }
+}
