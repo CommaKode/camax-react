@@ -1,16 +1,15 @@
 @import '../../scss/variables';
 
-span {
-  color: color(white);
-  cursor: pointer;
-}
-
 .copyTitle {
   width: fit-content;
   position: relative;
   &:hover .tooltip {
     opacity: 1;
     visibility: visible;
+  }
+  span {
+    color: color(white);
+    cursor: pointer;
   }
 }
 .copy-text {

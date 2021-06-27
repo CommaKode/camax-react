@@ -1,0 +1,16 @@
+@import '../../scss/variables';
+@import '../../scss/utilities';
+
+.hero {
+  width: 100%;
+}
+.hero-container {
+  margin-top: $section-margin;
+  @include between(column);
+  width: 100%;
+  min-height: calc(100vh - $navbar-height);
+}
+
+.hero-img {
+  width: 100%;
+}

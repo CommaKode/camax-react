@@ -12,7 +12,7 @@
   @include between();
   z-index: 1000;
   transition: $main-transition;
-  height: 4.5em;
+  height: $navbar-height;
   position: relative;
   background-color: color(white, light);
 
