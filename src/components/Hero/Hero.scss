@@ -2,15 +2,46 @@
 @import '../../scss/utilities';
 
 .hero {
+  position: relative;
   width: 100%;
 }
 .hero-container {
-  margin-top: $section-margin;
-  @include between(column);
-  width: 100%;
-  min-height: calc(100vh - $navbar-height);
+  min-height: calc(100vh - #{$navbar-height});
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  // * for making a gap between all childrens
+  > *:not(:last-child) {
+    margin-top: $section-margin;
+  }
+  > *:last-child {
+    margin: $element-margin 0 $section-margin 0;
+  }
 }
 
 .hero-img {
+  margin-top: $section-margin;
   width: 100%;
+}
+
+.hero-title {
+  width: 100%;
+  text-align: center;
+
+  h1 {
+    width: fit-content;
+    display: inline-block;
+  }
+  h2 {
+    color: color(black);
+  }
+  .doorphone {
+    color: color(black);
+  }
+  .camax {
+    color: color(primary);
+  }
 }
