@@ -6,11 +6,12 @@ $navbar-height: 4.5em;
 // !
 // ! paddings
 // !
+// * mobile container padding
+$container-side-padding: 1em;
+$container-padding: 0 $container-side-padding;
+
 // * mobile button padding (for top & bottom not sides)
 $m-btn-padding: 0.6em;
-
-// * mobile container padding
-$container-padding: 0 1em;
 
 // * whole mobile nav menu padding
 $list-padding: 1em;
