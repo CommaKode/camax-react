@@ -1,7 +1,7 @@
 import Hero from './Hero';
 
 export default {
-  title: 'Pages/MainPage/Hero',
+  title: 'Pages/Home/Hero',
   component: Hero,
 };
 
