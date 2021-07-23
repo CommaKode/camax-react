@@ -5,13 +5,15 @@ import { ReactComponent as CartIcon } from "../../Images/icons/buyCart.svg";
 import "./Card.scss";
 
 const Card = (props) => {
-  const { name, price, variant, src, ...rest } = props;
+  const { name, price, variant, ...rest } = props;
+  
   return (
     <div className={variant}>
-      <img src={(src)} alt={name} />
+      {/* <img src={(src)} alt={name} /> */}
       <span>{name}</span>
       <span>{price} ریال</span>
       <Button title="خرید کالا" variant="btn-card" Icon={CartIcon}></Button>
+      {console.log(name,"in card")}
     </div>
   );
 };

@@ -11,24 +11,14 @@ import MonitorItems from './MonitorItems';
 const ProductPage = (props) => {
   const { variant, ...rest } = props;
   return (
-    <>
-      {/* <Row >
-        <Col span={24}>
+    <div className="product-page">
           <NavBar />
-        </Col>
-      </Row>
-      <Row >
-        <Col span={18}> */}
-          <ProductGrid panels={MonitorItems} />
-        {/* </Col>
-        <Col span={6}>
+          <main className="product-main">
           <Filters />
-        </Col>
-      </Row>
-      <Row>
+          <ProductGrid panels={MonitorItems} />
+          </main>
         <Footer span={24}/>
-      </Row> */}
-    </>
+    </div>
   );
 };
 

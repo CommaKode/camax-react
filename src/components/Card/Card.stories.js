@@ -14,7 +14,7 @@ const Template = (args) =>  <Card {...args}/>
 export const ShopCard = Template.bind({});
 
 ShopCard.args = {
-    title : "43Win",
+    name : "43Win",
     price :'1000000',
     variant:"shop-card",
     src:win
