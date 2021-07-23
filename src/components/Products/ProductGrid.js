@@ -10,10 +10,11 @@ const ProductGrid = (props) => {
     <section className="product-grid">
       {panels.map((panel, index) => (
             <Card
-              name={panel.name}
+              title={panel.name}
               price={panel.price}
               key={index}
               variant={"shop-card"}
+              image={panel.name}
             />
       ))}
         {/* <Row gutter={16}>
