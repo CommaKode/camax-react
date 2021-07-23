@@ -26,3 +26,31 @@
   }
 }
 @import '../../scss/variables';
+
+.card {
+  background-color: color(white, light);
+  @include between(column);
+  width: fit-content;
+  padding: $card-padding;
+  border-radius: $card-radius;
+  overflow: visible;
+
+  > img {
+    width: 12em;
+  }
+  .button {
+    transform: translateY(50%);
+  }
+
+  > span {
+    color: color(black);
+  }
+  .title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+  }
+  .price {
+    margin-top: $small-margin;
+  }
+}
