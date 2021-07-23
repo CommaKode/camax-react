@@ -1,3 +1,6 @@
+
+
+
 const MonitorItems = [
   {
     name: "cdv-guard",
@@ -14,6 +17,8 @@ const MonitorItems = [
     twoPanelConnect: false,
     guard: true,
     extraLock: false,
+    image:'s'
+
   },
   {
     name: "cdv-43d",
@@ -30,6 +35,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: true,
     extraLock: true,
+    image:'s'
   },
   {
     name: "cdv-43dm",
@@ -46,6 +52,7 @@ const MonitorItems = [
     twoPanelConnect: false,
     guard: true,
     extraLock: false,
+    image:'s'
   },
   {
     name: "cdv-43win",
@@ -62,6 +69,7 @@ const MonitorItems = [
     twoPard: true,
     guadrd: true,
     extraLock: true,
+    image:'s'
   },
   {
     name: "cdv-46b",
@@ -78,6 +86,7 @@ const MonitorItems = [
     twoPanelConnect: false,
     guard: false,
     extraLock: false,
+    image:'s'
   },
   {
     name: "cdv-46bm",
@@ -94,6 +103,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: true,
     extraLock: true,
+    image:'s'
   },
   {
     name: "cdv-51d",
@@ -110,6 +120,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: false,
     extraLock: true,
+    image:'s'
   },
   {
     name: "cdv-51dm",
@@ -126,6 +137,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: false,
     extraLock: true,
+    image:'s'
   },
   {
     name: "cdv-70ms4",
@@ -142,6 +154,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: true,
     extraLock: true,
+    image:'s'
   },
   {
     name: "cdv-70t4",
@@ -158,6 +171,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: true,
     extraLock: false,
+    image:'s'
   },
   {
     name: "cdv-70tm4",
@@ -174,6 +188,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: true,
     extraLock: false,
+    image:'s'
   },
   {
     name: "cdv-70win",
@@ -190,6 +205,7 @@ const MonitorItems = [
     twoPanelConnect: false,
     guard: false,
     extraLock: false,
+    image:'s'
   },
   {
     name: "cdv-80ms4",
@@ -206,6 +222,7 @@ const MonitorItems = [
     twoPanelConnect: false,
     guard: false,
     extraLock: true,
+    image:'s'
   },
 ];
 
