@@ -2,6 +2,7 @@
 // ! height
 // !
 $navbar-height: 4.5em;
+$shopCard-height: 17em;
 
 // !
 // ! paddings
@@ -41,8 +42,17 @@ $search-m-radius: 5em;
 // * button radius
 $btn-radius: 1em;
 
+// * shopCard radius
+$shopCard-radius: 1em;
+
+
 // !
 // ! transition
 // !
 $main-transition: all 0.3s ease;
 $secondary-transition: all 0.3s ease-in;
+
+// !
+// ! Shadow
+// !
+$cardShadow : -4px 4px 20px 0px #6D6D6D08;

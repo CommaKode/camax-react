@@ -1,21 +1,22 @@
-import React from 'react';
-import { useState } from 'react';
+import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const List = (props) => {
   const { url, cName, title, options, ...rest } = props;
 
-  const [click, setClick] = useState('sub-uc');
-  const [rotate, setRotate] = useState('arrow-uc');
+  const [click, setClick] = useState("sub-uc");
+  const [rotate, setRotate] = useState("arrow-uc");
 
   const clickHandler = () => {
     switch (click) {
-      case 'sub-uc':
-        setClick('sub-c');
-        setRotate('arrow-c');
+      case "sub-uc":
+        setClick("sub-c");
+        setRotate("arrow-c");
         break;
       default:
-        setClick('sub-uc');
-        setRotate('arrow-uc');
+        setClick("sub-uc");
+        setRotate("arrow-uc");
     }
   };
 
@@ -46,16 +47,16 @@ const List = (props) => {
       <ul className={`sub-list ${click}`}>
         {options.map((option, index) => (
           <li key={index}>
-            <a href={option.url}>{option.title}</a>
+            <Link to={option.url}>{option.title}</Link>
           </li>
         ))}
       </ul>
     </li>
   ) : (
     <li className="list">
-      <a href={url} className={cName} {...rest}>
+      <Link to={url} className={cName} {...rest}>
         {title}
-      </a>
+      </Link>
     </li>
   );
 };

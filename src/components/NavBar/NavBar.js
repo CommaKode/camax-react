@@ -29,7 +29,7 @@ const NavBar = (props) => {
   };
   const { icons, list } = cNames;
   return (
-    <nav className="header" {...rest}>
+    <nav className="header" {...rest} >
       <div className={`navbar container `}>
         <span className={`before ${list}`}></span>
         <HamButton clk={clickHandler} />
