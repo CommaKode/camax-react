@@ -9,9 +9,9 @@ const Card = (props) => {
   return (
     <div className={`card ${variant}`} {...rest} key={key}>
       <img src={image} alt="pic" />
-      <span>{title}</span>
-      <span>{price} تومان</span>
-      <Button variant="btn-card" title="خرید کالا" Icon={buyIcon} />
+      <span className="title">{title}</span>
+      <span className="price">{price} تومان</span>
+      <Button variant="btn-card button" title="خرید کالا" Icon={buyIcon} />
     </div>
   );
 };
