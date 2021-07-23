@@ -60,6 +60,7 @@
     "@storybook/node-logger": "^6.3.4",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.4",
+    "node-sass": "^6.0.1",
     "storybook-addon-locale": "^0.3.6",
     "storybook-rtl-addon": "^0.3.2"
   }
