@@ -1,6 +1,5 @@
 import React from "react";
 import "./Products.scss";
-import { Row, Col } from "antd";
 import Card from "../Card/Card";
 
 const ProductGrid = (props) => {
@@ -13,8 +12,8 @@ const ProductGrid = (props) => {
               title={panel.name}
               price={panel.price}
               key={index}
-              variant={"shop-card"}
-              image={panel.name}
+              variant={"Shop"}
+              image={panel.image}
             />
       ))}
         {/* <Row gutter={16}>

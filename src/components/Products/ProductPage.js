@@ -2,10 +2,9 @@ import React from "react";
 import "./Products.scss";
 import NavBar from "../NavBar/NavBar";
 import ProductGrid from "./ProductGrid";
-import Filters from "./Filters";
+import Filters from "../Filter/Filters";
 import Footer from "../Footer/Footer";
-import { Row, Col } from "antd";
-import MonitorItems from './MonitorItems';
+import MonitorItems from '../Detail-Lists/Monitor';
 
 
 const ProductPage = (props) => {

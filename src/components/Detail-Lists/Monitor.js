@@ -1,5 +1,32 @@
+import product1 from "../../Images/Shop/CDV- GUARD.png";
+import product2 from "../../Images/Shop/CDV-43D.png";
+import product3 from "../../Images/Shop/CDV-43DM.png";
+import product4 from "../../Images/Shop/CDV-43WIN.png";
+import product5 from "../../Images/Shop/CDV-46B.png";
+import product6 from "../../Images/Shop/CDV-46BM.png";
+import product7 from "../../Images/Shop/CDV-51D.png";
+import product8 from "../../Images/Shop/CDV-70MS4.png";
+import product9 from "../../Images/Shop/CDV-70T4.png";
+import product10 from "../../Images/Shop/CDV-70TM4.png";
+import product11 from "../../Images/Shop/CDV-70WIN.png";
+import product12 from "../../Images/Shop/CDV-80MS4.png";
+import product13 from "../../Images/Shop/CDV-70T4.png";
 
-
+export const Options = [
+  "فیلتر قیمت",
+  "سایز صفحه نمایش",
+  "حافظه",
+  "ارتباط داخلی",
+  "گوشی",
+  "باز کن درب پارکینگ",
+  "نوع صفحه ی نمایش",
+  "کارتخوان",
+  "اتصال تلفن به مونیتور",
+  "اتصال به دوربین دیگر",
+  "اتصال به دو پنل بیرونی",
+  "اتصال به گارد نگهبانی",
+  "قفل اضافه",
+];
 
 const MonitorItems = [
   {
@@ -17,8 +44,7 @@ const MonitorItems = [
     twoPanelConnect: false,
     guard: true,
     extraLock: false,
-    image:'s'
-
+    image: product1,
   },
   {
     name: "cdv-43d",
@@ -35,7 +61,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: true,
     extraLock: true,
-    image:'s'
+    image: product2,
   },
   {
     name: "cdv-43dm",
@@ -52,7 +78,7 @@ const MonitorItems = [
     twoPanelConnect: false,
     guard: true,
     extraLock: false,
-    image:'s'
+    image: product3,
   },
   {
     name: "cdv-43win",
@@ -69,7 +95,7 @@ const MonitorItems = [
     twoPard: true,
     guadrd: true,
     extraLock: true,
-    image:'s'
+    image: product4,
   },
   {
     name: "cdv-46b",
@@ -86,7 +112,7 @@ const MonitorItems = [
     twoPanelConnect: false,
     guard: false,
     extraLock: false,
-    image:'s'
+    image: product5,
   },
   {
     name: "cdv-46bm",
@@ -103,7 +129,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: true,
     extraLock: true,
-    image:'s'
+    image: product6,
   },
   {
     name: "cdv-51d",
@@ -120,7 +146,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: false,
     extraLock: true,
-    image:'s'
+    image: product7,
   },
   {
     name: "cdv-51dm",
@@ -137,7 +163,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: false,
     extraLock: true,
-    image:'s'
+    image: product8,
   },
   {
     name: "cdv-70ms4",
@@ -154,7 +180,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: true,
     extraLock: true,
-    image:'s'
+    image: product9,
   },
   {
     name: "cdv-70t4",
@@ -171,7 +197,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: true,
     extraLock: false,
-    image:'s'
+    image: product10,
   },
   {
     name: "cdv-70tm4",
@@ -188,7 +214,7 @@ const MonitorItems = [
     twoPanelConnect: true,
     guard: true,
     extraLock: false,
-    image:'s'
+    image: product11,
   },
   {
     name: "cdv-70win",
@@ -205,7 +231,7 @@ const MonitorItems = [
     twoPanelConnect: false,
     guard: false,
     extraLock: false,
-    image:'s'
+    image: product12,
   },
   {
     name: "cdv-80ms4",
@@ -222,7 +248,7 @@ const MonitorItems = [
     twoPanelConnect: false,
     guard: false,
     extraLock: true,
-    image:'s'
+    image: product13,
   },
 ];
 

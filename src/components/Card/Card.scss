@@ -1,32 +1,6 @@
 @import "../../scss/variables";
 @import "../../scss/utilities";
 
-.shop-card {
-  width: 15em;
-  @include between(column);
-  border-radius: $shopCard-radius;
-  overflow: visible;
-  box-shadow: $cardShadow;
-  margin-right: $element-margin;
-  height: $shopCard-height;
-  background-color: color(white, light);
-
-  > span {
-    font-size: inherit;
-    margin-bottom: 1em;
-    }
-
-  > img {
-    height: 140px;
-    width: 165px;
-    margin-top: 25px;
-  }
-  > button {
-    margin-bottom: -10%;
-  }
-}
-@import '../../scss/variables';
-
 .card {
   background-color: color(white, light);
   @include between(column);
@@ -34,7 +8,8 @@
   padding: $card-padding;
   border-radius: $card-radius;
   overflow: visible;
-
+  transition: $card-transition;
+  cursor: pointer;
   > img {
     width: 12em;
   }
@@ -52,5 +27,8 @@
   }
   .price {
     margin-top: $small-margin;
+  }
+  &:hover{
+    transform: translateY(-.2em);
   }
 }

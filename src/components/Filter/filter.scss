@@ -1,0 +1,36 @@
+@import "../../scss/variables";
+
+// .filters {
+//   width: 80%;
+//   height: 50em;
+//   // height: fit-content;
+//   background-color: color(secondary,dark);
+//   border-radius: $card-radius;
+//   margin-inline: auto;
+
+// }
+
+// .filters {
+//   @include Mobile {
+
+//   }
+// }
+.filters{
+  color: color(black);
+  @include between(column);
+  
+  span{
+    background-color: color(white,light);
+    width: 100%;
+    @include between();
+    // border-radius: $card-radius;
+    // margin-top: 1.5em;
+    h1{
+      padding-right:1.5em ;
+    }
+    
+  }
+  ul{
+    display: none;
+  }
+}
