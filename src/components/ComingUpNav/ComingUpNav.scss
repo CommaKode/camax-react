@@ -1,0 +1,21 @@
+@import "../../scss/variables";
+
+.ComingUpNav{
+  width: 100%;
+  padding: $list-padding;
+  @include fixedNav();
+  border-radius: $fixed-nav-radius;
+  @include between(column);
+ 
+  
+}
+.overlay {
+  background-color: color(white);
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 998;
+//   opacity: 0.3;
+}

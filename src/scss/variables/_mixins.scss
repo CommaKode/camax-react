@@ -26,6 +26,22 @@
 }
 
 
+@mixin fixedNav($bgColor: black) {
+  overflow: scroll;
+  background-color: color($bgColor);
+  color: color(white);
+  position: fixed;
+  bottom: 0;
+  top: 120%;
+  right: 0;
+  width: 100%;
+  margin-top: -2.5em;
+  z-index: 999;
+}
+
+// *Responsive* //
+
+
 @mixin Desktop {
   @media (min-width: #{$desktop}) {
     @content;

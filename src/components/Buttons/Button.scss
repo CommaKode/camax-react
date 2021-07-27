@@ -53,3 +53,15 @@
     background-color: color(primary);
   }
 }
+
+.tool-button {
+  @include between();
+  background-color: color(white, light);
+  padding: $filter-tools-padding;
+  border-radius: $card-radius;
+  white-space: nowrap;
+  img {
+    @include box(1.5em);
+    margin-right: 1em;
+  }
+}

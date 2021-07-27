@@ -15,22 +15,49 @@
 
 //   }
 // }
-.filters{
+.filters {
   color: color(black);
   @include between(column);
-  
-  span{
-    background-color: color(white,light);
+
+  .filter-tools {
     width: 100%;
-    @include between();
-    // border-radius: $card-radius;
-    // margin-top: 1.5em;
-    h1{
-      padding-right:1.5em ;
+    margin-top: $section-margin;
+    display: flex;
+    justify-content: space-around;
+    .btn-tool {
+      @include between();
+      background-color: color(white, light);
+      padding: $filter-tools-padding;
+      border-radius: $card-radius;
+      white-space: nowrap;
+      img {
+        @include box(1.5em);
+        margin-right: 1em;
+      }
     }
-    
+    button:first-child {
+      @include Desktop {
+        display: none;
+      }
+    }
+    button:last-child {
+      @include Desktop {
+        padding: $btn-padding;
+      }
+    }
   }
-  ul{
-    display: none;
+  .filter-items-field {
+    padding: $list-padding;
+    @include fixedNav();
+    border-radius: $fixed-nav-radius;
+    @include between(column);
+    .filter-items {
+      @include between();
+      width: 20em;
+      margin-bottom: $element-margin;
+    }
+    h3{
+      margin-bottom: $element-margin;
+    }
   }
 }

@@ -1,50 +1,60 @@
-import { React, useState } from "react";
+import { React, useState, useRef, useEffect } from "react";
 import "./filter.scss";
-import FilterItem from "./FilterItem";
+import FilterItem from "../List/CheckBoxList";
 import { Options } from "../Detail-Lists/Monitor";
-import HamButton from "../NavBar/HamButton/HamButton";
-import NavMenu from "../NavBar/NavMenu";
+import FilterIcon from "../../Images/icons/filter.svg";
+import SortIcon from "../../Images/icons/sort.svg";
+import Lists from "../List/Lists";
+import { TweenMax, Power3 } from "gsap";
+import ComingUpNav from "../ComingUpNav/ComingUpNav";
 
 const Filters = (props) => {
+  const [Show, setShow] = useState(false)
   const { ...rest } = props;
-  
-  const [click, setClick] = useState("unClicked");
-  const [cNames, setCNames] = useState({
-      icons: "icon-color-switch-uc",
-      list: "nav-list-uc",
-    });
-    const clickHandler = () => {
-        switch (click) {
-            case "unClicked":
-                setClick("clicked");
-                setCNames({
-                    icons: "icon-color-switch-c",
-                    list: "nav-list-c",
-                });
-                break;
-                default:
-                    setClick("unClicked");
-                    setCNames({
-                        icons: "icon-color-switch-uc",
-                        list: "nav-list-uc",
-                    });
-                }
-            };
-            const { icons, list } = cNames;
-            return (
-                <aside className="filters">
-      <span>
-        <h1>فیلتر ها </h1>
-        <HamButton clk={clickHandler} />
-      </span>
-      <ul>
-        {Options.map((option, index) => (
-          <li>
-            <FilterItem title={option} key={index} index={index} />
-          </li>
-        ))}
-      </ul>
-      <NavMenu list={list} />
+  let ComingUpNave = useRef(null);
+  // const clickHandlerFilter = () => {
+  //   TweenMax.to(ComingUpNave, 0.8, {
+  //     top: "35%",
+  //     ease: Power3.easeInOut,
+  //   });
+  // };
+  return (
+    <aside className="filters">
+      <div className="filter-tools">
+        <button className='btn-tool' onClick={()=>setShow(!Show)}>
+          فیلتر ها <img src={FilterIcon} alt="" />{" "}
+        </button>
+        <button className='btn-tool'>
+          {" "}
+          مرتب سازی <img src={SortIcon} alt="" />
+        </button>
+      </div>
+      {/* <div
+        className="filter-items-field"
+        ref={(el) => {
+          ComingUpNave = el;
+        }}
+      >
+        <h3>فیلتر ها</h3>
+        <ul>
+          {Options.map((option, index) => (
+            <li>
+              <FilterItem title={option} key={index} index={index} variant="filter-items"/>
+            </li>
+          ))}
+        </ul>
+      </div> */}
+      <ComingUpNav
+        checkList={true}
+        variant={"filter-items-field"}
+        animDuration={0.8}
+        checkList={true}
+        header="فیلترها"
+        items={Options}
+        animEase={Power3.easeInOut}
+        top="35%"
+        state={Show}
+      />
     </aside>
   );
 };
