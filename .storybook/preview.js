@@ -3,6 +3,10 @@ import { withConsole } from "@storybook/addon-console";
 import { addParameters } from "@storybook/react";
 import { withDirection } from "storybook-rtl-addon";
 import store from "../src/store/store";
+import ProviderWrapper from "../src/store/Provider/ProviderWrapper";
+import RouterWrapper from "../src/store/Router/RouterWrapper";
+
+
 addParameters({
   locales: {
     en: { dir: "ltr", name: "English", text: "English" },
@@ -12,8 +16,6 @@ addParameters({
 });
 
 import "../src/scss/_reset.scss";
-import ProviderWrapper from "../src/store/Provider/ProviderWrapper";
-// import store from "../src";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -29,8 +31,4 @@ export const parameters = {
 addDecorator((storyFn, context) => withConsole()(storyFn)(context));
 addDecorator(withDirection);
 addDecorator((story) => <ProviderWrapper children={story()} store={store} />);
-// import { configure } from '@storybook/react'
-
-// configure(function() {
-//   require('../src/components/ComingUpNav/ComingUpNav.stories')
-// }, module)
+addDecorator((story) => <RouterWrapper children={story()}  />);
