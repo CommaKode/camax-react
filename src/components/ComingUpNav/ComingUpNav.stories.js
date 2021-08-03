@@ -13,13 +13,16 @@ const Template = (args) => <ComingUpNav {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   title: "بیا بالا",
-  variant: "filter-items",
+  variant: "ComingUpNav",
   animDuration: 0.8,
   btnVariant: "btn-secondary",
   btnTitle: "فیلتر",
   checkList: true,
   header: "Header",
   items: Options,
-  animEase:Power3.easeInOut,
-  top:"35%",
+  animEase: Power3.easeInOut,
+  top: "30%",
+  doneBtn:true,
+  doneTitle:"Done",
+  doneVariant:"btn-primary"
 };

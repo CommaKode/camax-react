@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware, compose } from "redux";
-import thunk from "redux-thunk";
-import rootReducer from "./store/Reducers/rootReducer";
+// import { createStore, applyMiddleware, compose } from "redux";
+// import thunk from "redux-thunk";
+// import rootReducer from "./store/Reducers/rootReducer";
+import store from "./store/store";
 
-const store = createStore(rootReducer, compose(applyMiddleware(thunk)));
+// const store = createStore(rootReducer, compose(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,7 +18,9 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
+// const App = () => {
+//   const dispatch = useDispatch();
+// }
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
