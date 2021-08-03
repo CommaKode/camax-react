@@ -1,0 +1,27 @@
+@import '.././../scss/variables';
+
+.carousel-container {
+  direction: ltr;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8em;
+    img {
+      width: 6em;
+    }
+  }
+  .carousel {
+    width: calc(100% - 8em);
+  }
+  .swiper-slide {
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+  .swiper-wrapper {
+    // flex-direction: row-reverse;
+  }
+}
