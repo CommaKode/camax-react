@@ -13,6 +13,7 @@ import product12 from "../../Images/Shop/CDV-80MS4.png";
 import product13 from "../../Images/Shop/CDV-70T4.png";
 
 export const Options = [
+  // {name:"فیلتر قیمت",key=""},
   "فیلتر قیمت",
   "سایز صفحه نمایش",
   "حافظه",

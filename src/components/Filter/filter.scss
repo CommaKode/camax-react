@@ -18,7 +18,7 @@
 .filters {
   color: color(black);
   @include between(column);
-
+  position: relative;
   .filter-tools {
     width: 100%;
     margin-top: $section-margin;
@@ -56,8 +56,20 @@
       width: 20em;
       margin-bottom: $element-margin;
     }
-    h3{
+    h3 {
       margin-bottom: $element-margin;
     }
   }
+}
+
+.filter-items-field > * {
+  margin: $section-margin;
+}
+
+.filter-items-field > ul {
+  width: 70%;
+}
+.filter-items-field > ul > li > * {
+  margin: $element-margin;
+  @include between();
 }

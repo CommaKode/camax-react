@@ -1,11 +1,14 @@
-import { React, useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./ComingUpNav.scss";
 import Lists from "../List/Lists";
 import { TweenMax, Power3 } from "gsap";
 import CheckBoxList from "../List/CheckBoxList";
 import Button from "../Buttons/Button";
+import { useSelector, useDispatch } from "react-redux";
 
-const ComingUpNav = (props) => {
+const ComingUpNav = React.memo((props) => {
+  const comeUp = useSelector((state) => state.comeUp);
+  const dispatch = useDispatch();
   const [show, setshow] = useState(false);
   const {
     animDuration,
@@ -17,42 +20,66 @@ const ComingUpNav = (props) => {
     header,
     animEase,
     top,
-    state,
     variant,
-
+    overlay,
+    doneBtn,
+    doneVariant,
+    doneIcon,
+    doneTitle,
     ...rest
   } = props;
 
-  let ComingUpNave = useRef(null);
-
+  let ComingUp = useRef(null);
+  let ComeUpOverlay = useRef(null);
   useEffect(() => {
-    state
-      ? TweenMax.to(ComingUpNave, animDuration, {
-          top: top,
-          ease: animEase,
-        })
-      : TweenMax.to(ComingUpNave, animDuration, {
-          top: "120%",
-          ease: animEase,
-        });
-  }, [state]);
+    setshow(!show);
+    if (show === true) {
+      TweenMax.to(ComingUp, animDuration, {
+        top: top,
+        ease: animEase,
+      });
+      TweenMax.to(ComeUpOverlay, animDuration, {
+        top: 0,
+        ease: animEase,
+      });
+    } else {
+      TweenMax.to(ComingUp, animDuration, {
+        top: "120%",
+        ease: animEase,
+      });
+      TweenMax.to(ComeUpOverlay, animDuration, {
+        top: "120%",
+        ease: animEase,
+      });
+    }
+  }, [comeUp]);
 
   return (
-    <div className={state?"overlay":null} onClick={()=>setshow(false)}>
+    <>
+    <div
+      className="overlay"
+      onClick={() => dispatch({ type: "close-comeUp" })}
+      ref={(el) => {
+        ComeUpOverlay = el;
+      }}
+    >
+    </div>
+
       <div>
         {btnVariant ? (
           <Button
             variant={btnVariant}
             Icon={icon}
-            onClick={() => setshow(!show)}
+            onClick={() => dispatch({ type: "open-comeUp" })}
             title={btnTitle}
           />
         ) : null}
       </div>
+
       <div
-        className={variant?variant:"ComingUpNav"}
+        className={variant ? variant : "filter-items-field"}
         ref={(el) => {
-          ComingUpNave = el;
+          ComingUp = el;
         }}
       >
         <h3>{header}</h3>
@@ -69,9 +96,18 @@ const ComingUpNav = (props) => {
             <Lists items={items} />
           </div>
         )}
+      {doneBtn ? (
+        <Button
+          variant={doneVariant}
+          Icon={doneIcon}
+          onClick={() => dispatch({ type: "close-comeUp" })}
+          title={doneTitle}
+        />
+      ) : null
+      }
       </div>
-    </div>
+    </>
   );
-};
+});
 
 export default ComingUpNav;

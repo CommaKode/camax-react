@@ -4,10 +4,11 @@ import Card from "../Card/Card";
 
 const ProductGrid = (props) => {
   const { panels, ...rest } = props;
+  // const [Filtered, setFiltered] = useState([])
   console.log(panels, "in gird");
   return (
     <section className="product-grid">
-      {panels.map((panel, index) => (
+      {/* {panels.map((panel, index) => (
             <Card
               title={panel.name}
               price={panel.price}
@@ -15,11 +16,13 @@ const ProductGrid = (props) => {
               variant={"Shop"}
               image={panel.image}
             />
-      ))}
-        {/* <Row gutter={16}>
-          <Col span={6}>
-          </Col>
-        </Row> */}
+      ))} */
+      }
+      {
+        // panels.filter
+      }
+
+    
     </section>
   );
 };
