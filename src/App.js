@@ -1,11 +1,12 @@
-import "./scss/_reset.scss";
-import NavBar from "./components/NavBar/NavBar";
-import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero/Hero";
+import './scss/_reset.scss';
+import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
+import Hero from './components/Hero/Hero';
 // import RouteApp from './RouteApp';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import NavMobile from './components/nav-bar/NavMobile';
-import ProductPage from "./components/Products/ProductPage";
+import ProductPage from './components/Products/ProductPage';
+import HomePageCar from './components/Carousel/HomePageCar';
 
 function App() {
   return (
@@ -16,10 +17,9 @@ function App() {
         </Route>
         <Route exact path="/">
           <div className="App">
-            {/* <NavMobile /> */}
-            {/* <RouteApp /> */}
             <NavBar />
             <Hero />
+            <HomePageCar />
             <Footer />
           </div>
         </Route>

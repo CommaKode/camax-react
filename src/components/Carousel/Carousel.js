@@ -2,7 +2,6 @@ import React from 'react';
 import './Carousel.scss';
 
 import Card from '../Card/Card';
-import ShopCardList from '../Card/ShopCardList';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
@@ -12,7 +11,7 @@ import 'swiper/components/navigation/navigation.scss';
 SwiperCore.use([Navigation]);
 
 const Carousel = (props) => {
-  const { carImg, carAlt, ...rest } = props;
+  const { carImg, carAlt, data, ...rest } = props;
   return (
     <div className="carousel-container container" {...rest}>
       <div className="carousel">
@@ -29,6 +28,7 @@ const Carousel = (props) => {
           freeMode={true}
           freeModeSticky={true}
           grabCursor={true}
+          mousewheel={true}
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -42,7 +42,7 @@ const Carousel = (props) => {
             },
           }}
         >
-          {ShopCardList.map((card, index) => {
+          {data.map((card, index) => {
             return (
               <SwiperSlide key={index}>
                 <Card

@@ -4,24 +4,25 @@
   direction: ltr;
   width: 100vw;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  // box-sizing: content-box;
   .image {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 8em;
+    width: 6em;
     img {
-      width: 6em;
+      width: 5em;
     }
   }
   .carousel {
-    width: calc(100% - 8em);
+    width: calc(100% - 6em);
   }
   .swiper-slide {
     margin-bottom: 2em;
     margin-top: 2em;
   }
-  .swiper-wrapper {
-    // flex-direction: row-reverse;
-  }
+  // .swiper-wrapper {
+  //   flex-direction: row-reverse;
+  // }
 }
