@@ -28,6 +28,7 @@ $btn-padding: 0.6em 1.2em;
 
 // * card padding
 $card-padding: 0 1em;
+$info-card-padding: 1em;
 
 // * Filter tools like sort and mobile filter padding
 $filter-tools-padding: 1.5em 4.5em;
@@ -52,8 +53,7 @@ $card-radius: 1em;
 $btn-radius: 1em;
 
 // Bottom Fixed Navigation Radius
-$fixed-nav-radius: 2em 2em 0 0 ;
-
+$fixed-nav-radius: 2em 2em 0 0;
 
 // !
 // ! transition
@@ -65,4 +65,4 @@ $card-transition: transform 0.3s ease;
 // !
 // ! Shadow
 // !
-$cardShadow : -4px 4px 20px 0px #6D6D6D08;
+$cardShadow: -4px 4px 20px 0px #6d6d6d08;

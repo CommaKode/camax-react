@@ -44,6 +44,10 @@ body {
   height: 100vh;
   width: 100%;
   font-size: 1.6rem;
+
+  // *erase 👇 before building
+  direction: rtl;
+  // *erase 👆 before building
 }
 ul {
   list-style: none;
