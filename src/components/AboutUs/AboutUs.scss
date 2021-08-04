@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+
+// .aboutus-bg {
+// }
+
+.aboutus-intro {
+  h3 {
+    font-size: 2rem;
+    display: flex;
+    color: color(black);
+    margin-top: $element-margin;
+    span {
+      color: color(primary, light);
+      margin-right: 0.4pc;
+    }
+  }
+  p {
+    margin-top: $small-margin;
+    color: color(black, light);
+  }
+}
+
+.info-cards {
+  margin-top: $element-margin;
+}
