@@ -2,10 +2,10 @@
 
 .carousel-container {
   direction: ltr;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  // box-sizing: content-box;
+  background-color: color(secondary, dark);
   .image {
     display: flex;
     justify-content: center;
@@ -19,8 +19,8 @@
     width: calc(100% - 6em);
   }
   .swiper-slide {
-    margin-bottom: 2em;
-    margin-top: 2em;
+    margin-bottom: 4em;
+    margin-top: 4em;
   }
   // .swiper-wrapper {
   //   flex-direction: row-reverse;
