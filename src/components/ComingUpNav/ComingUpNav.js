@@ -88,8 +88,8 @@ const ComingUpNav = React.memo((props) => {
         {checkList ? (
           <ul>
             {items.map((item, index) => (
-              <li key={index}>
-                <CheckBoxList title={item}  index={index} />
+              <li>
+                <CheckBoxList title={item}  index={index}  key={index} />
               </li>
             ))}
           </ul>
