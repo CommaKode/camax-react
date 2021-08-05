@@ -1,0 +1,27 @@
+@import '../../scss/variables';
+
+.info-card {
+  position: relative;
+  @include card();
+  display: block;
+  margin-top: $element-margin;
+  padding: $info-card-padding;
+  max-width: 340px;
+  max-height: 340px;
+  span,
+  span > svg {
+    max-width: 160px;
+    max-height: 80px;
+    margin-bottom: $element-margin;
+  }
+  > h4 {
+    color: color(black);
+    font-size: 1.8rem;
+  }
+  > p {
+    margin-top: $small-margin;
+    color: color(black, light);
+    text-align: right;
+    font-size: 1.4rem;
+  }
+}

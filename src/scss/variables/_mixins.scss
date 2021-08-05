@@ -1,4 +1,6 @@
-@import "./breakpoints";
+@import '../variables/colors';
+@import './extra';
+@import './breakpoints';
 
 @mixin box($width, $height: $width) {
   width: $width;
@@ -25,6 +27,11 @@
   display: block;
 }
 
+@mixin card($radius: $card-radius) {
+  background-color: color(white, light);
+  border-radius: $radius;
+  box-shadow: $cardShadow;
+}
 
 @mixin fixedNav($bgColor: black) {
   overflow: scroll;
@@ -42,9 +49,26 @@
 
 // *Responsive* //
 
-
 @mixin Desktop {
   @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin Desktop-l {
+  @media (min-width: $desktop-l) {
+    @content;
+  }
+}
+
+@mixin Desktop-xl {
+  @media (min-width: $desktop-xl) {
+    @content;
+  }
+}
+
+@mixin Desktop-xxl {
+  @media (min-width: $desktop-xxl) {
     @content;
   }
 }
