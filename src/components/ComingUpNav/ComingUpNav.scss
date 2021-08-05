@@ -6,16 +6,13 @@
   @include fixedNav();
   border-radius: $fixed-nav-radius;
   @include between(column);
-  // @include Desktop{
-  //   display: none;
-  // }
+ 
 }
 
 .overlay {
-  background-color: rgba(238, 238, 238, 0.116);
+  background-color: transparent;
   position: fixed;
   bottom: 0;
-  top: 120%;
   left: 0;
   width: 100vw;
   z-index: 998;
