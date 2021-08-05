@@ -54,3 +54,21 @@
     @content;
   }
 }
+
+@mixin Desktop-l {
+  @media (min-width: $desktop-l) {
+    @content;
+  }
+}
+
+@mixin Desktop-xl {
+  @media (min-width: $desktop-xl) {
+    @content;
+  }
+}
+
+@mixin Desktop-xxl {
+  @media (min-width: $desktop-xxl) {
+    @content;
+  }
+}

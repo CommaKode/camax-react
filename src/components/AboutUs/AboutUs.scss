@@ -1,7 +1,28 @@
 @import '../../scss/variables';
 
-// .aboutus-bg {
-// }
+.aboutus-bg {
+  // margin-top: $element-margin;
+  top: 0;
+  position: absolute;
+  width: 80%;
+  height: 900px;
+  background-color: color(secondary, dark);
+  z-index: -1;
+  border-radius: 20px 0 0 20px;
+  transition: $main-transition;
+  transform-origin: right;
+  transform: scaleX(0);
+  @include Desktop {
+    transform: scaleX(1);
+  }
+}
+
+.aboutus-container {
+  @include between(column);
+  @include Desktop-xl {
+    flex-direction: row;
+  }
+}
 
 .aboutus-intro {
   h3 {
@@ -18,8 +39,36 @@
     margin-top: $small-margin;
     color: color(black, light);
   }
+  @include Desktop {
+    h3 {
+      color: color(white);
+    }
+    p {
+      color: color(white, dark);
+    }
+  }
+  // @include Desktop-xl {
+  //   width: 40% !important;
+  // }
 }
 
 .info-cards {
   margin-top: $element-margin;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  .card-box {
+    @include between(column);
+    @include Desktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em;
+      width: fit-content;
+    }
+  }
+  // @include Desktop-xl {
+  //   width: 60%;
+  // }
 }

@@ -7,8 +7,8 @@ const AboutUs = () => {
   return (
     <React.Fragment>
       <span className="aboutus-bg"></span>
-      <div className="aboutus-container container">
-        <div className="aboutus-intro">
+      <div className="aboutus-container">
+        <div className="aboutus-intro container">
           <h3 class="h2">
             چرا <span>کامکث؟</span>
           </h3>
@@ -27,16 +27,18 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="info-cards">
-          {AboutUsData.map((card, index) => {
-            return (
-              <InfoCard
-                Image={card.Image}
-                title={card.title}
-                txt={card.txt}
-                key={index}
-              />
-            );
-          })}
+          <div className="card-box container">
+            {AboutUsData.map((card, index) => {
+              return (
+                <InfoCard
+                  Image={card.Image}
+                  title={card.title}
+                  txt={card.txt}
+                  key={index}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </React.Fragment>
