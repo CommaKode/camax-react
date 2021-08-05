@@ -1,5 +1,11 @@
 @import '../../scss/variables';
 
+.aboutus {
+  width: 100%;
+  position: relative;
+  margin-top: $section-margin;
+}
+
 .aboutus-bg {
   max-width: 75em;
   top: 0;

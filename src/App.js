@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // import NavMobile from './components/nav-bar/NavMobile';
 import ProductPage from './components/Products/ProductPage';
 import HomePageCar from './components/Carousel/HomePageCar';
+import AboutUs from './components/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <NavBar />
             <Hero />
             <HomePageCar />
+            <AboutUs />
             <Footer />
           </div>
         </Route>

@@ -5,7 +5,7 @@ import InfoCard from './InfoCard';
 
 const AboutUs = () => {
   return (
-    <React.Fragment>
+    <div className="aboutus">
       <span className="aboutus-bg"></span>
       <div className="aboutus-container">
         <div className="aboutus-intro container">
@@ -41,7 +41,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
