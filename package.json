@@ -20,11 +20,8 @@
     "sass": "^1.35.1",
     "sass-loader": "^12.1.0",
     "style-loader": "^2.0.0",
-<<<<<<< HEAD
     "use-immer": "^0.6.0",
-=======
     "swiper": "^6.8.1",
->>>>>>> e0d2a156384c19e0026e5e7518d248fb576fd3b8
     "web-vitals": "^1.1.2"
   },
   "scripts": {
