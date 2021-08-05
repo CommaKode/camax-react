@@ -18,12 +18,12 @@ const Filters = React.memo((props) => {
     <aside className="filters">
       <div className="filter-tools">
         <button
-          className="btn-tool"
+          className="btn btn-tool"
           onClick={() => dispatch({ type: "open-comeUp" })}
         >
           فیلتر ها <img src={FilterIcon} alt="" />
         </button>
-        <button className="btn-tool">
+        <button className="btn btn-tool">
         
           مرتب سازی <img src={SortIcon} alt="" />
         </button>

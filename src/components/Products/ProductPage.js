@@ -10,14 +10,16 @@ import MonitorItems from '../Detail-Lists/Monitor';
 const ProductPage = (props) => {
   const { variant, ...rest } = props;
   return (
+   <>
     <div className="product-page">
-          <NavBar />
+      <NavBar />
           <main className="product-main">
           <Filters />
           <ProductGrid panels={MonitorItems} />
           </main>
-        <Footer span={24}/>
+        <Footer />
     </div>
+   </>
   );
 };
 
