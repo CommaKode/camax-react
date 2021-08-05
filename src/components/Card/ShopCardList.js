@@ -5,7 +5,7 @@ import product4 from '../../Images/Shop/CDV-43WIN.png';
 
 const ShopCardList = [
   {
-    title: 'CDV-HSH2',
+    title: 'CDV-HSH1',
     price: '20000',
     image: product1,
   },
@@ -15,12 +15,12 @@ const ShopCardList = [
     image: product2,
   },
   {
-    title: 'CDV-HSH2',
+    title: 'CDV-HSH3',
     price: '20000',
     image: product3,
   },
   {
-    title: 'CDV-HSH2',
+    title: 'CDV-HSH4',
     price: '20000',
     image: product4,
   },
