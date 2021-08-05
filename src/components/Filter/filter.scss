@@ -25,13 +25,10 @@
     display: flex;
     justify-content: space-around;
     .btn-tool {
-      @include between();
       background-color: color(white, light);
-      padding: $filter-tools-padding;
-      border-radius: $card-radius;
-      white-space: nowrap;
+
       img {
-        @include box(1.5em);
+        @include box(1em);
         margin-right: 1em;
       }
     }

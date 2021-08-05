@@ -1,6 +1,6 @@
-@import '../variables/colors';
-@import './extra';
-@import './breakpoints';
+@import "../variables/colors";
+@import "./extra";
+@import "./breakpoints";
 
 @mixin box($width, $height: $width) {
   width: $width;
@@ -22,7 +22,7 @@
 }
 
 @mixin pseudo() {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
 }
@@ -42,9 +42,9 @@
   top: 120%;
   right: 0;
   left: 0;
-  width: 100%;
   margin-top: -2.5em;
   z-index: 999;
+  width: 100%;
 }
 
 // *Responsive* //
