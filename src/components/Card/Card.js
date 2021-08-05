@@ -4,10 +4,10 @@ import './Card.scss';
 import { ReactComponent as buyIcon } from '../../Images/icons/buyCart.svg';
 
 const Card = (props) => {
-  const { variant, title, price, image, key, ...rest } = props;
+  const { variant, title, price, image, ...rest } = props;
 
   return (
-    <div className={`card ${variant}`} {...rest} key={key}>
+    <div className={`card ${variant}`} {...rest} >
       <img src={image} alt="pic" />
       <span className="title">{title.toUpperCase()}</span>
       <span className="price">{price} تومان</span>
