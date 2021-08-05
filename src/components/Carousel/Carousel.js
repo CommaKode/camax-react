@@ -9,7 +9,7 @@ import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 
 SwiperCore.use([Navigation]);
-
+  
 const Carousel = (props) => {
   const { carImg, carAlt, data, ...rest } = props;
   return (

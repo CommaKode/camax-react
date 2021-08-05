@@ -20,43 +20,43 @@ const CheckBoxList = (props) => {
 
           break;
         case "ارتباط داخلی":
-          dispatch({ type: "sd" });
+          dispatch({ type: "intercommunicate" });
 
           break;
         case "گوشی":
-          dispatch({ type: "sd" });
+          dispatch({ type: "handyPhone" });
 
           break;
         case "باز کن درب پارکینگ":
-          dispatch({ type: "sd" });
+          dispatch({ type: "parkingOpener" });
 
           break;
         case "نوع صفحه ی نمایش":
-          dispatch({ type: "sd" });
+          dispatch({ type: "touch" });
 
           break;
         case "کارتخوان":
-          dispatch({ type: "sd" });
+          dispatch({ type: "cart" });
 
           break;
         case "اتصال تلفن به مونیتور":
-          dispatch({ type: "sd" });
+          dispatch({ type: "mobileConnect" });
 
           break;
         case  "اتصال به دوربین دیگر":
-          dispatch({ type: "sd" });
+          dispatch({ type: "camera" });
 
           break;
         case "اتصال به دو پنل بیرونی":
-          dispatch({ type: "sd" });
+          dispatch({ type: "twoPanelConnect" });
 
           break;
         case "اتصال به گارد نگهبانی":
-          dispatch({ type: "sd" });
+          dispatch({ type: "guard" });
 
           break;
         case "قفل اضافه":
-          dispatch({ type: "sd" });
+          dispatch({ type: "image" });
 
           break;
 
