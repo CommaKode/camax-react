@@ -1,60 +1,43 @@
+import {produce} from 'immer';
+
 const initState = {
   filterList: [],
 };
 const filterReducer = (state = initState, action) => {
   switch (action.type) {
     case "sd":
-      {
-        state.filterList.push("sd");
-      }
-      break;
+      return { ...state, filterList:[...state.filterList, action.type] };
+
     case "intercommunicate":
-      {
-        state.filterList.push("intercommunicate");
-      }
-      break;
+      return { ...state, filterList:[...state.filterList, action.type] };
 
     case "handyPhone":
-      state.filterList.push("handyPhone");
-      break;
+      return { ...state, filterList:[...state.filterList, action.type] };
+
     case "parkingOpener":
-      state.filterList.push("parkingOpener");
-      break;
+      return { ...state, filterList:[...state.filterList, action.type] };
+
     case "touch":
-      {
-        state.filterList.push("touch");
-      }
-      break;
+      return { ...state, filterList:[...state.filterList, action.type] };
+
     case "cart":
-      {
-        state.filterList.push("cart");
-      }
-      break;
+      return { ...state, filterList:[...state.filterList, action.type] };
+
     case "mobileConnect":
-      {
-        state.filterList.push("sd");
-      }
-      break;
+      return { ...state, filterList:[...state.filterList, action.type] };
+
     case "camera":
-      {
-        state.filterList.push("mobileConnect");
-      }
-      break;
+      return { ...state, filterList:[...state.filterList, action.type] };
+
     case "twoPanelConnect":
-      {
-        state.filterList.push("twoPanelConnect");
-      }
-      break;
+      return { ...state, filterList:[...state.filterList, action.type] };
+
     case "guard":
-      {
-        state.filterList.push("guard");
-      }
-      break;
+      return { ...state, filterList:[...state.filterList, action.type] };
+
     case "image":
-      {
-        state.filterList.push("image");
-      }
-      break;
+      return { ...state, filterList:[...state.filterList, action.type] };
+
     default:
       return state;
   }
