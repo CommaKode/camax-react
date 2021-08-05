@@ -33,7 +33,6 @@ const Filters = React.memo((props) => {
         checkList={true}
         variant={"filter-items-field"}
         animDuration={0.8}
-        checkList={true}
         header="فیلترها"
         items={Options}
         animEase={Power3.easeInOut}
