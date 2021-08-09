@@ -7,9 +7,10 @@ $shopCard-height: 17em;
 // !
 // ! paddings
 // !
-// * mobile container padding
+// * container padding
 $container-side-padding: 1em;
 $container-padding: 0 $container-side-padding;
+$desk-container-padding: 0 2em;
 
 // * mobile button padding (for top & bottom not sides)
 $m-btn-padding: 0.6em;

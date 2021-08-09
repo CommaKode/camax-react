@@ -7,6 +7,10 @@
 .header {
   position: relative;
   width: 100%;
+  display: block;
+  @include Desktop-xl {
+    display: none;
+  }
 }
 .navbar {
   @include between();

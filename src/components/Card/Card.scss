@@ -1,7 +1,8 @@
-@import "../../scss/variables";
-@import "../../scss/utilities";
+@import '../../scss/variables';
+@import '../../scss/utilities';
 
 .card {
+  direction: rtl;
   background-color: color(white, light);
   @include between(column);
   width: fit-content;
@@ -28,7 +29,7 @@
   .price {
     margin-top: $small-margin;
   }
-  &:hover{
-    transform: translateY(-.2em);
+  &:hover {
+    transform: translateY(-0.2em);
   }
 }

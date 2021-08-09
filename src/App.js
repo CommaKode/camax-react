@@ -1,5 +1,5 @@
 import './scss/_reset.scss';
-import NavBar from './components/NavBar/NavBar';
+import Nav from './components/NavBar/Nav';
 import Footer from './components/Footer/Footer';
 import Hero from './components/Hero/Hero';
 // import RouteApp from './RouteApp';
@@ -18,7 +18,7 @@ function App() {
         </Route>
         <Route exact path="/">
           <div className="App">
-            <NavBar />
+            <Nav />
             <Hero />
             <HomePageCar />
             <AboutUs />

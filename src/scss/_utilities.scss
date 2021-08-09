@@ -3,6 +3,9 @@
 .container {
   width: 100%;
   padding: $container-padding;
+  @include Desktop-xl {
+    padding: $desk-container-padding;
+  }
 }
 
 .ltr {
