@@ -1,24 +1,38 @@
 @import "../../scss/variables";
 
-// .filters {
-//   width: 80%;
-//   height: 50em;
-//   // height: fit-content;
-//   background-color: color(secondary,dark);
-//   border-radius: $card-radius;
-//   margin-inline: auto;
-
-// }
-
-// .filters {
-//   @include Mobile {
-
-//   }
-// }
 .filters {
-  color: color(black);
+  .filter-items-desktop {
+    display: none;
+  }
+  width: 90%;
+  @include Desktop {
+    height: fit-content;
+    border-radius: $card-radius;
+    margin-inline: auto;
+    background-color: color(secondary, dark);
+    .filter-items-desktop {
+      list-style: none;
+      @include between(column);
+      width: 80%;
+      margin: 2em;
+      li {
+        background-color: color(white, light);
+        padding: $filter-items-padding;
+        margin-bottom: $element-margin;
+        width: 100%;
+        // white-space: nowrap;
+        border-radius: $btn-radius;
+        @include between();
+        label {
+          margin-right: 3em;
+        }
+        input {
+          margin-left: 3em;
+        }
+      }
+    }
+  }
   @include between(column);
-  position: relative;
   .filter-tools {
     width: 100%;
     margin-top: $section-margin;
@@ -32,15 +46,8 @@
         margin-right: 1em;
       }
     }
-    button:first-child {
-      @include Desktop {
-        display: none;
-      }
-    }
-    button:last-child {
-      @include Desktop {
-        padding: $btn-padding;
-      }
+    @include Desktop {
+      display: none;
     }
   }
   .filter-items-field {

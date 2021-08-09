@@ -1,18 +1,25 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import "./filter.scss";
-import FilterItem from "../List/CheckBoxList";
 import { Options } from "../Detail-Lists/Monitor";
 import FilterIcon from "../../Images/icons/filter.svg";
 import SortIcon from "../../Images/icons/sort.svg";
-import Lists from "../List/Lists";
-import { TweenMax, Power3 } from "gsap";
-import ComingUpNav from "../ComingUpNav/ComingUpNav";
+import {  Power3 } from "gsap";
+import PopUp from "../PopUp/PopUp";
 import { useSelector, useDispatch } from "react-redux";
+import "./sort.scss";
+import Sort from "./Sort";
 
 const Filters = React.memo((props) => {
-  const { ...rest } = props;
   const comeUp = useSelector((state) => state.comeUp);
   const dispatch = useDispatch();
+  const btns = [
+    "پربازدید ترین",
+    "پرفروش ترین",
+    "محبوب ترین",
+    "جدید ترین",
+    "ارزان ترین",
+    "گران ترین",
+  ];
 
   return (
     <aside className="filters">
@@ -24,12 +31,11 @@ const Filters = React.memo((props) => {
           فیلتر ها <img src={FilterIcon} alt="" />
         </button>
         <button className="btn btn-tool">
-        
           مرتب سازی <img src={SortIcon} alt="" />
         </button>
       </div>
 
-      <ComingUpNav
+      <PopUp
         checkList={true}
         variant={"filter-items-field"}
         animDuration={0.8}
@@ -38,9 +44,23 @@ const Filters = React.memo((props) => {
         animEase={Power3.easeInOut}
         top={"30%"}
         doneBtn={true}
-        doneTitle={'Done'}
+        doneTitle={"Done"}
         doneVariant={"btn-primary"}
       />
+      <ul className="filter-items-desktop">
+        <Sort
+          containerVariant={"sort-container"}
+          btnTitles={btns}
+          animDuration={1.5}
+          animEase={"slow(0.7, 0.7, false)"}
+        />
+        {Options.map((item, index) => (
+          <li key={index}>
+            <label htmlFor={`sort-${index}`}>{item}</label>
+            <input id={`sort-${index}`} type="checkbox" />
+          </li>
+        ))}
+      </ul>
     </aside>
   );
 });
