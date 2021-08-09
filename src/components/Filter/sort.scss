@@ -1,0 +1,39 @@
+@import "../../scss/variables";
+.sort-container {
+  display: none;
+  @include Desktop {
+    position: relative;
+    width: 100%;
+    background-color: color(white, light);
+    border-radius: 0 0 1em 1em;
+    height: 0;
+    top: -1.5em;
+    @include between();
+    justify-content:center;
+    ul {
+      margin-top: 1.5em;
+      width:70%;
+    }
+    span {
+      padding: $sort-card-padding;
+      display: none;
+      opacity: 0;
+      transition:opacity 1s;
+    }
+    .dropDown {
+      @include between();
+    }
+  }
+}
+.fade{
+  opacity: 0;
+}
+.show{
+  opacity: 1 !important;
+}
+.sort-btn {
+  width: 100%;
+  background-color: color(white, light);
+  margin-bottom: $element-margin;
+  z-index: 2;
+}

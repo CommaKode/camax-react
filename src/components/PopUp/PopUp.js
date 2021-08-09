@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./ComingUpNav.scss";
+import "./PopUp.scss";
 import Lists from "../List/Lists";
-import { TweenMax, Power3 } from "gsap";
+import { TweenMax } from "gsap";
 import CheckBoxList from "../List/CheckBoxList";
 import Button from "../Buttons/Button";
 import { useSelector, useDispatch } from "react-redux";
@@ -22,12 +22,12 @@ const ComingUpNav = React.memo((props) => {
     animEase,
     top,
     variant,
-    overlay,
+    // overlay,
     doneBtn,
     doneVariant,
     doneIcon,
     doneTitle,
-    ...rest
+    // ...rest
   } = props;
 
   let ComingUp = useRef(null);

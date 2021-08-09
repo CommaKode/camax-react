@@ -9,7 +9,7 @@ const CheckBoxList = (props) => {
 
 
   return (
-    <div className={variant}>
+    <div className={variant} {...rest}>
       <label
         htmlFor={`input-${index}`}
         ref={(el) => {
@@ -24,7 +24,6 @@ const CheckBoxList = (props) => {
         ref={(el) => {
           input = el;
         }}
-        // onChange={(ev) => handler(ev.target.checked)}
       />
     </div>
   );
