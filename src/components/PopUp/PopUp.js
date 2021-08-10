@@ -7,10 +7,7 @@ import Button from "../Buttons/Button";
 import { useSelector, useDispatch } from "react-redux";
 
 
-const ComingUpNav = React.memo((props) => {
-  const comeUp = useSelector((state) => state.comeUp);
-  const dispatch = useDispatch();
-  const [show, setshow] = useState(false);
+const PopUp = React.memo((props) => {
   const {
     animDuration,
     btnVariant,
@@ -27,8 +24,11 @@ const ComingUpNav = React.memo((props) => {
     doneVariant,
     doneIcon,
     doneTitle,
+    state,
     // ...rest
   } = props;
+  const dispatch = useDispatch();
+  const [show, setshow] = useState(false);
 
   let ComingUp = useRef(null);
   let ComeUpOverlay = useRef(null);
@@ -53,14 +53,14 @@ const ComingUpNav = React.memo((props) => {
         ease: animEase,
       });
     }
-  }, [comeUp]);
+  }, [state]);
 
  
   return (
     <>
     <div
       className="overlay"
-      onClick={() => dispatch({ type: "close-comeUp" })}
+      onClick={() => dispatch({ type: "close" })}
       ref={(el) => {
         ComeUpOverlay = el;
       }}
@@ -102,7 +102,7 @@ const ComingUpNav = React.memo((props) => {
         <Button
           variant={doneVariant}
           Icon={doneIcon}
-          onClick={() => dispatch({ type: "close-comeUp" })}
+          onClick={() => dispatch({ type: "close" })}
           title={doneTitle}
         />
       ) : null
@@ -112,4 +112,4 @@ const ComingUpNav = React.memo((props) => {
   );
 });
 
-export default ComingUpNav;
+export default PopUp;

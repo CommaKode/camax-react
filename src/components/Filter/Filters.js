@@ -10,7 +10,8 @@ import "./sort.scss";
 import Sort from "./Sort";
 
 const Filters = React.memo((props) => {
-  const comeUp = useSelector((state) => state.comeUp);
+  const filterPopUp = useSelector((state) => state.popUp.filterPopUp);
+  const sortPopUp = useSelector((state) => state.popUp.sortPopUp);
   const dispatch = useDispatch();
   const btns = [
     "پربازدید ترین",
@@ -26,11 +27,13 @@ const Filters = React.memo((props) => {
       <div className="filter-tools">
         <button
           className="btn btn-tool"
-          onClick={() => dispatch({ type: "open-comeUp" })}
+          onClick={() => dispatch({ type: "open-filterPopUp" })}
         >
           فیلتر ها <img src={FilterIcon} alt="" />
         </button>
-        <button className="btn btn-tool">
+        <button className="btn btn-tool"
+        onClick={() =>dispatch({ type:"open-sortPopUp"})}
+        >
           مرتب سازی <img src={SortIcon} alt="" />
         </button>
       </div>
@@ -46,6 +49,21 @@ const Filters = React.memo((props) => {
         doneBtn={true}
         doneTitle={"Done"}
         doneVariant={"btn-primary"}
+        state={filterPopUp}
+      />
+
+      <PopUp
+        checkList={true}
+        variant={"filter-items-field"}
+        animDuration={0.8}
+        header="فیلترها"
+        items={btns}
+        animEase={Power3.easeInOut}
+        top={"30%"}
+        doneBtn={true}
+        doneTitle={"Done"}
+        doneVariant={"btn-primary"}
+        state={sortPopUp}
       />
       <ul className="filter-items-desktop">
         <Sort
