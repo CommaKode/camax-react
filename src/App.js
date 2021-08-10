@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ProductPage from './components/Products/ProductPage';
 import HomePageCar from './components/Carousel/HomePageCar';
 import AboutUs from './components/AboutUs/AboutUs';
+import SuggestionCar from './components/Suggestion/SuggestionCar';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <div className="App">
             <Nav />
             <Hero />
+            <SuggestionCar />
             <HomePageCar />
             <AboutUs />
             <Footer />

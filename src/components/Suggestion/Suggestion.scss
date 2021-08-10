@@ -1,0 +1,90 @@
+@import '../../scss/variables';
+
+.suggestion {
+  position: relative;
+  width: 100%;
+  margin-bottom: $section-margin;
+  display: none;
+  @include Desktop-xl {
+    display: block;
+  }
+  &::before {
+    @include pseudo();
+    position: absolute;
+    z-index: -1;
+    background-color: color(secondary, dark);
+    width: 50%;
+    height: 100%;
+    left: 0;
+    border-radius: 0 2em 2em 0;
+  }
+}
+.sugg-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.sugg-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  width: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  > span {
+    color: color(white);
+  }
+
+  .sugg-title {
+    font-weight: 800;
+    font-size: 7.8rem;
+    opacity: 0.5;
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+  }
+
+  .sugg-price {
+    font-size: 2.4rem;
+    margin-bottom: $element-margin;
+  }
+}
+
+.sugg-img {
+  width: 30em;
+  margin-top: $element-margin;
+}
+
+.sugg-detail {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 90%;
+  top: 10%;
+  right: 0;
+
+  > span {
+    color: color(black);
+    font-size: 2.8rem;
+    margin-bottom: $element-margin;
+  }
+  ul {
+    list-style-type: disc;
+    opacity: 0.6;
+    font-size: 2rem;
+    li {
+      line-height: 2.4em;
+    }
+  }
+}
