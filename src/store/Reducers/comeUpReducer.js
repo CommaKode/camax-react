@@ -1,17 +1,24 @@
 const initState = {
-  comeUpHandler: false
+  filterPopUp: false,
+  sortPopUp: false,
 };
 const comeUpReducer = (state = initState, action) => {
   switch (action.type) {
-    case "open-comeUp":
+    case "open-filterPopUp":
       return {
         ...state,
-        comeUpHandler: true,
+        filterPopUp: true,
       };
-      case "close-comeUp":
+    case "close":
       return {
         ...state,
-        comeUpHandler: false,
+        filterPopUp: false,
+        sortPopUp: false,
+      };
+    case "open-sortPopUp":
+      return {
+        ...state,
+        sortPopUp: true,
       };
 
     default:

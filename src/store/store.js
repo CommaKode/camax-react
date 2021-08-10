@@ -3,7 +3,7 @@ import comeUpReducer from './Reducers/comeUpReducer';
 
 
 const store = configureStore({
-  reducer: { comeUp: comeUpReducer },
+  reducer: { popUp: comeUpReducer },
 });
 
 export default store;
