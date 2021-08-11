@@ -1,0 +1,63 @@
+@import './scss/variables';
+
+@include Desktop-xl {
+  .hero {
+    position: relative;
+    margin-bottom: $section-margin;
+
+    &::after {
+      @include pseudo();
+      position: absolute;
+      top: 90%;
+      left: 7em;
+      width: 2px;
+      height: 6em;
+      background-color: color(primary, light);
+    }
+  }
+
+  .car {
+    position: relative;
+
+    &::after {
+      @include pseudo();
+      position: absolute;
+      bottom: 97%;
+      left: 7em;
+      width: 70%;
+      height: 4em;
+      border: solid 2px color(primary, light);
+      border-top: transparent;
+      border-right: transparent;
+      border-radius: 0 0 0 2em;
+    }
+  }
+
+  .aboutus {
+    position: relative;
+    margin-top: $section-margin * 3 !important;
+
+    &::after {
+      @include pseudo();
+      position: absolute;
+      top: 94%;
+      right: 7em;
+      width: 2px;
+      height: 9em;
+      background-color: color(primary, light);
+    }
+    &::before {
+      @include pseudo();
+      position: absolute;
+      bottom: 103%;
+      right: 7em;
+      width: 2px;
+      height: 9em;
+      background-color: color(primary, light);
+    }
+  }
+
+  .page-footer {
+    margin-top: $section-margin * 2 !important;
+  }
+}

@@ -29,3 +29,14 @@
   //   flex-direction: row-reverse;
   // }
 }
+
+.car-header {
+  font-size: 2.4rem;
+  color: color(black);
+  font-weight: 400;
+  margin-bottom: $element-margin;
+  display: none;
+  @include Desktop-xl {
+    display: block;
+  }
+}

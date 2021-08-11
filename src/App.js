@@ -1,4 +1,5 @@
 import './scss/_reset.scss';
+import './App.scss';
 import Nav from './components/NavBar/Nav';
 import Footer from './components/Footer/Footer';
 import Hero from './components/Hero/Hero';

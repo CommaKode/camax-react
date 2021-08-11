@@ -7,10 +7,11 @@ import Monitor from '../Card/ShopCardList';
 
 const HomePageCar = () => {
   return (
-    <React.Fragment>
+    <div className="car">
+      <h4 className="car-header container">محصولات پرفروش</h4>
       <Carousel data={Monitor} carImg={monitorVec} carAlt="monitor" />
       <Carousel data={Monitor} carImg={panelVec} carAlt="panel" />
-    </React.Fragment>
+    </div>
   );
 };
 
