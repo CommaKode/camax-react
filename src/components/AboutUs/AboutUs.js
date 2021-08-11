@@ -9,7 +9,7 @@ const AboutUs = () => {
       <span className="aboutus-bg"></span>
       <div className="aboutus-container">
         <div className="aboutus-intro container">
-          <h3 class="h2">
+          <h3 className="aboutus-h">
             چرا <span>کامکث؟</span>
           </h3>
           <p>

@@ -42,10 +42,13 @@
 .aboutus-intro {
   max-width: 40em;
   h3 {
-    font-size: 2rem;
     display: flex;
     color: color(black);
     margin-top: $element-margin;
+    font-size: 2.4rem;
+    @include Desktop-xl {
+      font-size: 3.2rem;
+    }
     span {
       color: color(primary, light);
       margin-right: 0.4pc;
