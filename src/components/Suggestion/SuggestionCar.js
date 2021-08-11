@@ -5,17 +5,22 @@ import './Suggestion.scss';
 import ShopCardList from '../Card/ShopCardList';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation } from 'swiper';
+import SwiperCore, { EffectFade, Navigation } from 'swiper';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/effect-fade/effect-fade.scss';
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, EffectFade]);
 
 const SuggestionCar = () => {
   const [trans, setTrans] = useState('');
   return (
     <div className={'suggestion ' + trans}>
       <Swiper
+        effect="fade"
+        fadeEffect={{
+          crossFade: true,
+        }}
         slidesPerView={1}
         navigation
         loop={true}
