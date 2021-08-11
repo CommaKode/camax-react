@@ -17,6 +17,9 @@
   }
   .carousel {
     width: calc(100% - 6em);
+    @include Desktop-xl {
+      width: calc(100% - 8em);
+    }
   }
   .swiper-slide {
     margin-bottom: 4em;
