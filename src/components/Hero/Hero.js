@@ -4,9 +4,10 @@ import './Hero.scss';
 import Button from '../Buttons/Button';
 import { ReactComponent as ServIcon } from '../../Images/icons/sevices.svg';
 
-const Hero = () => {
+const Hero = (props) => {
+  const { cName, ...rest } = props;
   return (
-    <div className="hero">
+    <div className={'hero ' + cName} {...rest}>
       <div className="hero-container container">
         <img className="hero-img" src={heroImg} alt="ایفون تصویری کامکث" />
         <div className="hero-action">

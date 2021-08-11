@@ -1,7 +1,7 @@
 @import './scss/variables';
 
 @include Desktop-xl {
-  .hero {
+  .hero-line {
     position: relative;
     margin-bottom: $section-margin;
 
@@ -16,7 +16,7 @@
     }
   }
 
-  .car {
+  .car-line {
     position: relative;
 
     &::after {
@@ -33,9 +33,10 @@
     }
   }
 
-  .aboutus {
+  .aboutus-line {
     position: relative;
     margin-top: $section-margin * 3 !important;
+    margin-bottom: $section-margin * 2 !important;
 
     &::after {
       @include pseudo();
@@ -55,9 +56,5 @@
       height: 9em;
       background-color: color(primary, light);
     }
-  }
-
-  .page-footer {
-    margin-top: $section-margin * 2 !important;
   }
 }

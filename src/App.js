@@ -21,10 +21,10 @@ function App() {
         <Route exact path="/">
           <div className="App">
             <Nav />
-            <Hero />
+            <Hero cName="hero-line" />
             <SuggestionCar />
-            <HomePageCar />
-            <AboutUs />
+            <HomePageCar cName="car-line" />
+            <AboutUs cName="aboutus-line" />
             <Footer />
           </div>
         </Route>
