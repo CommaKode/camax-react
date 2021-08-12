@@ -1,5 +1,4 @@
-import React, { useRef,useEffect } from "react";
-// import { useSelector, useDispatch } from "react-redux";
+import React, { useRef } from "react";
 
 const CheckBoxList = (props) => {
   const { title, index, variant,id, ...rest } = props;
