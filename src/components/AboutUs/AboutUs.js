@@ -3,13 +3,14 @@ import './AboutUs.scss';
 import AboutUsData from './AboutUsData';
 import InfoCard from './InfoCard';
 
-const AboutUs = () => {
+const AboutUs = (props) => {
+  const { cName, ...rest } = props;
   return (
-    <div className="aboutus">
+    <div className={'aboutus ' + cName} {...rest}>
       <span className="aboutus-bg"></span>
       <div className="aboutus-container">
         <div className="aboutus-intro container">
-          <h3 class="h2">
+          <h3 className="aboutus-h">
             چرا <span>کامکث؟</span>
           </h3>
           <p>

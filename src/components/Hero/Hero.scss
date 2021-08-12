@@ -14,22 +14,44 @@
   height: 100%;
 
   // * for making a gap between all childrens
-  > *:not(:last-child) {
-    margin-top: $section-margin;
-  }
-  > *:last-child {
-    margin: $element-margin 0 $section-margin 0;
+  .hero-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include Desktop-l {
+      align-items: flex-start;
+    }
+
+    > *:last-child {
+      margin: $element-margin 0 $section-margin 0;
+    }
   }
 }
 
 .hero-img {
-  margin-top: $section-margin;
+  margin: $section-margin 0;
   width: 100%;
+  @include Desktop-l {
+    width: 60%;
+  }
 }
 
 .hero-title {
   width: 100%;
   text-align: center;
+  margin-bottom: $element-margin;
+  @include Desktop-l {
+    text-align: right;
+  }
+  @include Desktop-xl {
+    h1 {
+      font-size: 4.6rem;
+    }
+    h2 {
+      font-size: 3.6rem;
+    }
+  }
 
   h1 {
     width: fit-content;
@@ -43,5 +65,31 @@
   }
   .camax {
     color: color(primary);
+  }
+}
+
+.hero-btns {
+  @include between(column);
+  > *:not(:first-child) {
+    margin-top: $element-margin;
+  }
+  @include Desktop-l {
+    align-items: flex-start;
+  }
+  @include Desktop-xl {
+    flex-direction: row;
+    > *:not(:first-child) {
+      margin-top: 0;
+      margin-right: $element-margin;
+    }
+  }
+}
+
+// * responsive
+
+.hero-container {
+  @include Desktop-l {
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 }
