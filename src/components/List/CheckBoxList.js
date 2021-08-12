@@ -1,17 +1,16 @@
-import React, { useRef, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useRef,useEffect } from "react";
+// import { useSelector, useDispatch } from "react-redux";
 
 const CheckBoxList = (props) => {
-  const { title, index, variant, ...rest } = props;
+  const { title, index, variant,id, ...rest } = props;
   let input = useRef(null);
   let label = useRef(null);
-
-
-
+  
+ 
   return (
     <div className={variant} {...rest}>
       <label
-        htmlFor={`input-${index}`}
+        htmlFor={`${id}-${index}`}
         ref={(el) => {
           label = el;
         }}
@@ -19,7 +18,7 @@ const CheckBoxList = (props) => {
         {title}
       </label>
       <input
-        id={`input-${index}`}
+        id={`${id}-${index}`}
         type="checkbox"
         ref={(el) => {
           input = el;

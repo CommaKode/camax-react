@@ -2,7 +2,7 @@ import React from "react";
 import "./Products.scss";
 import Card from "../Card/Card";
 
-const ProductGrid = (props) => {
+const ProductsGrid = (props) => {
   const { panels, ...rest } = props;
 
   return (
@@ -22,4 +22,4 @@ const ProductGrid = (props) => {
   );
 };
 
-export default ProductGrid;
+export default ProductsGrid;

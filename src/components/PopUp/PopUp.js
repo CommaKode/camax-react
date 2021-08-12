@@ -4,10 +4,12 @@ import Lists from "../List/Lists";
 import { TweenMax } from "gsap";
 import CheckBoxList from "../List/CheckBoxList";
 import Button from "../Buttons/Button";
-import { useSelector, useDispatch } from "react-redux";
-
+import {  useDispatch } from "react-redux";
 
 const PopUp = React.memo((props) => {
+
+ 
+   
   const {
     animDuration,
     btnVariant,
@@ -24,6 +26,7 @@ const PopUp = React.memo((props) => {
     doneVariant,
     doneIcon,
     doneTitle,
+    id,
     state,
     // ...rest
   } = props;
@@ -33,6 +36,7 @@ const PopUp = React.memo((props) => {
   let ComingUp = useRef(null);
   let ComeUpOverlay = useRef(null);
   useEffect(() => {
+    
     setshow(!show);
     if (show === true) {
       TweenMax.to(ComingUp, animDuration, {
@@ -55,17 +59,15 @@ const PopUp = React.memo((props) => {
     }
   }, [state]);
 
- 
   return (
     <>
-    <div
-      className="overlay"
-      onClick={() => dispatch({ type: "close" })}
-      ref={(el) => {
-        ComeUpOverlay = el;
-      }}
-    >
-    </div>
+      <div
+        className="overlay"
+        onClick={() => dispatch({ type: "close" })}
+        ref={(el) => {
+          ComeUpOverlay = el;
+        }}
+      ></div>
 
       <div>
         {btnVariant ? (
@@ -89,7 +91,7 @@ const PopUp = React.memo((props) => {
           <ul>
             {items.map((item, index) => (
               <li key={index}>
-                <CheckBoxList title={item}  index={index}   />
+                <CheckBoxList title={item} index={index} id={id} />
               </li>
             ))}
           </ul>
@@ -98,15 +100,14 @@ const PopUp = React.memo((props) => {
             <Lists items={items} />
           </div>
         )}
-      {doneBtn ? (
-        <Button
-          variant={doneVariant}
-          Icon={doneIcon}
-          onClick={() => dispatch({ type: "close" })}
-          title={doneTitle}
-        />
-      ) : null
-      }
+        {doneBtn ? (
+          <Button
+            variant={doneVariant}
+            Icon={doneIcon}
+            onClick={() => dispatch({ type: "close" })}
+            title={doneTitle}
+          />
+        ) : null}
       </div>
     </>
   );

@@ -1,8 +1,8 @@
-import { combineReducers } from "redux";
-import comeUpReducer from "./comeUpReducer";
+// import { combineReducers } from "redux";
+// import popUpReducer from "./popUpReducer";
 
-const rootReducer = combineReducers({
-  comeUp: comeUpReducer,
-});
+// const rootReducer = combineReducers({
+//   comeUp: popUpReducer,
+// });
 
-export default rootReducer;
+// export default rootReducer;

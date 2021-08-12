@@ -2,7 +2,7 @@ const initState = {
   filterPopUp: false,
   sortPopUp: false,
 };
-const comeUpReducer = (state = initState, action) => {
+const popUpReducer = (state = initState, action) => {
   switch (action.type) {
     case "open-filterPopUp":
       return {
@@ -26,4 +26,4 @@ const comeUpReducer = (state = initState, action) => {
   }
   return state;
 };
-export default comeUpReducer;
+export default popUpReducer;

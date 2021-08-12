@@ -15,7 +15,11 @@ export const Sort = (props) => {
   const [ShowSort, setShowSort] = useState(false);
   const [DropDown, setDropDown] = useState("");
   const [Show, setShow] = useState("fade");
+
+
   let height = `${btnTitles.length * 3.4}em`;
+
+
   useEffect(() => {
     if (ShowSort === true) {
       TweenMax.to(container, animDuration, {
@@ -42,6 +46,8 @@ export const Sort = (props) => {
       }, 130);
     }
   }, [ShowSort]);
+
+  
   return (
     <>
       <Button

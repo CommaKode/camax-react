@@ -3,16 +3,21 @@ import "./filter.scss";
 import { Options } from "../Detail-Lists/Monitor";
 import FilterIcon from "../../Images/icons/filter.svg";
 import SortIcon from "../../Images/icons/sort.svg";
-import {  Power3 } from "gsap";
+import { Power3 } from "gsap";
 import PopUp from "../PopUp/PopUp";
 import { useSelector, useDispatch } from "react-redux";
 import "./sort.scss";
 import Sort from "./Sort";
 
 const Filters = React.memo((props) => {
+
+  
   const filterPopUp = useSelector((state) => state.popUp.filterPopUp);
   const sortPopUp = useSelector((state) => state.popUp.sortPopUp);
   const dispatch = useDispatch();
+
+
+
   const btns = [
     "پربازدید ترین",
     "پرفروش ترین",
@@ -21,6 +26,8 @@ const Filters = React.memo((props) => {
     "ارزان ترین",
     "گران ترین",
   ];
+
+
 
   return (
     <aside className="filters">
@@ -31,8 +38,9 @@ const Filters = React.memo((props) => {
         >
           فیلتر ها <img src={FilterIcon} alt="" />
         </button>
-        <button className="btn btn-tool"
-        onClick={() =>dispatch({ type:"open-sortPopUp"})}
+        <button
+          className="btn btn-tool"
+          onClick={() => dispatch({ type: "open-sortPopUp" })}
         >
           مرتب سازی <img src={SortIcon} alt="" />
         </button>
@@ -50,13 +58,14 @@ const Filters = React.memo((props) => {
         doneTitle={"Done"}
         doneVariant={"btn-primary"}
         state={filterPopUp}
+        id={"filters"}
       />
 
       <PopUp
         checkList={true}
         variant={"filter-items-field"}
         animDuration={0.8}
-        header="فیلترها"
+        header="مرتب سازی"
         items={btns}
         animEase={Power3.easeInOut}
         top={"30%"}
@@ -64,6 +73,7 @@ const Filters = React.memo((props) => {
         doneTitle={"Done"}
         doneVariant={"btn-primary"}
         state={sortPopUp}
+        id={"sorts"}
       />
       <ul className="filter-items-desktop">
         <Sort
@@ -74,8 +84,8 @@ const Filters = React.memo((props) => {
         />
         {Options.map((item, index) => (
           <li key={index}>
-            <label htmlFor={`sort-${index}`}>{item}</label>
-            <input id={`sort-${index}`} type="checkbox" />
+            <label htmlFor={`filter-${index}`}>{item}</label>
+            <input id={`filter-${index}`} type="checkbox" />
           </li>
         ))}
       </ul>
