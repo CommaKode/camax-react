@@ -11,30 +11,30 @@ const PopUp = React.memo((props) => {
  
    
   const {
-    animDuration,
-    btnVariant,
-    btnTitle,
-    icon,
-    items,
-    checkList,
-    header,
-    animEase,
-    top,
-    variant,
-    // overlay,
-    doneBtn,
-    doneVariant,
-    doneIcon,
-    doneTitle,
-    id,
-    state,
+    animDuration,     // Duration of the anniamation
+    btnVariant,      // this btn is just for storybook 
+    btnTitle,       // this btn is just for storybook 
+    icon,           // icon for btn
+    items,          // list of items for the popUp
+    checkList,      // if you want your list be a checklist you should pass it true
+    header,         // the header tha shown at the top of popUP
+    animEase,       //  the ease of animation
+    top,            // how much do you want the popUp comes up 
+    variant,        //  the variant of div of that contains the list
+    // overlay,     // 
+    doneBtn,        // if you want a done btn you should pass it true
+    doneVariant,     // the variant of the done btn
+    doneIcon,       //  the icon of doneBtn
+    doneTitle,      // the title of doneBtn
+    id,             // the id of labels and inputs that used in your list     **!important**
+    state,          // you should pass the state that you introduced in your reducer for the popUP **!important**
     // ...rest
   } = props;
   const dispatch = useDispatch();
   const [show, setshow] = useState(false);
 
   let ComingUp = useRef(null);
-  let ComeUpOverlay = useRef(null);
+  let popUpOverlay = useRef(null);
   useEffect(() => {
     
     setshow(!show);
@@ -43,7 +43,7 @@ const PopUp = React.memo((props) => {
         top: top,
         ease: animEase,
       });
-      TweenMax.to(ComeUpOverlay, animDuration, {
+      TweenMax.to(popUpOverlay, animDuration, {
         top: 0,
         ease: animEase,
       });
@@ -52,7 +52,7 @@ const PopUp = React.memo((props) => {
         top: "120%",
         ease: animEase,
       });
-      TweenMax.to(ComeUpOverlay, animDuration, {
+      TweenMax.to(popUpOverlay, animDuration, {
         top: "120%",
         ease: animEase,
       });
@@ -65,7 +65,7 @@ const PopUp = React.memo((props) => {
         className="overlay"
         onClick={() => dispatch({ type: "close" })}
         ref={(el) => {
-          ComeUpOverlay = el;
+          popUpOverlay = el;
         }}
       ></div>
 
