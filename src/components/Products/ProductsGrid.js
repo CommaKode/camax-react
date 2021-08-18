@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Products.scss";
 import Card from "../Card/Card";
 
 const ProductsGrid = (props) => {
   const { panels, ...rest } = props;
-
+  
+  // const [panels, setpanels] = useState([]);
+  // useEffect(() => {
+  //   fetch("https://fakestoreapi.com/products")
+  //     .then((resp) => {
+  //       return resp.json();
+  //     })
+  //     .then((res) => {
+  //       console.log(res);
+  //      return setpanels(res)
+  //     })
+  //     .catch((err) => {
+  //       console.error(err);
+  //     });
+  // }, []);
+  
+ 
   return (
     <>
       <section className="product-grid" {...rest}>
@@ -15,8 +31,10 @@ const ProductsGrid = (props) => {
             key={index}
             variant={"Shop"}
             image={panel.image}
+            id={panel.id}
           />
         ))}
+      
       </section>
     </>
   );

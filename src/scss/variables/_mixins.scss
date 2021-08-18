@@ -49,8 +49,18 @@
 
 // *Responsive* //
 
+@mixin Tablet {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
 @mixin Desktop {
   @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+@mixin Desktop-m {
+  @media (min-width: #{$desktop-m}) {
     @content;
   }
 }

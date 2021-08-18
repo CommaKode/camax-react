@@ -9,7 +9,7 @@ const ProductsPage = (props) => {
   const { variant, ...rest } = props;
   return (
     <>
-      <div className="product-page" {...rest}>
+      <div className="product-page" {...rest} >
         <main className="product-main">
           <Filters />
           <ProductsGrid panels={MonitorItems} />

@@ -1,0 +1,83 @@
+@import "../../../scss/variables";
+
+.ReviewContainer {
+
+  width: 90%;
+  background-color: color(white);
+  min-height: 13.5em;
+  padding: $review-padding;
+  border-radius: $card-radius;
+  margin-block: 4em;
+  margin-inline: auto;
+  overflow: hidden;
+
+  p {
+    line-height: 3em;
+    padding: 2.5em 1.5em;
+  }
+  > span {
+    position: absolute;
+    right: 80%;
+    text-decoration: underline;
+    color: rgb(32, 223, 213);
+    cursor: pointer;
+  }
+  .features {
+    margin: $element-margin $element-margin $element-margin auto;
+    width: 85%;
+    div {
+      @include between();
+      margin-bottom: $element-margin;
+      span:last-child {
+        margin-left: auto !important;
+        margin-right: $element-margin;
+      }
+    }
+  }
+  @include Desktop-m{
+    // background-color: transparent;
+    height: 100% !important;
+   > span{display: none;}
+   
+  }
+}
+
+.review-nav {
+
+  display: none;
+  margin: $section-margin 2em;
+
+    @include between();
+    position: sticky;
+    top: 0;
+    background-color: color(white,light);
+    padding: 2em 2em;
+    z-index: 99;
+    ul {
+      @include between();
+      position: absolute;
+      li {
+        margin: 0 $element-margin;
+        position: relative;
+        
+        a {
+          color: color(black, dark);
+          &:hover {
+            color: color(primary, light);
+          }
+        }
+      }
+    }
+  
+}
+
+.selected {
+  color:color(primary) !important;
+  &::after {
+    @include pseudo();
+    border-bottom: 2px solid;
+    width: 100%;
+    top: 160%;
+    z-index: 99;
+  }
+}

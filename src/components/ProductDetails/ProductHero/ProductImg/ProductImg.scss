@@ -1,0 +1,26 @@
+@import "../../../../scss/variables";
+
+
+.product-img {
+    @include between();
+    justify-content: center;
+    img {
+      width: 15em;
+      margin-block: $element-margin;
+    }
+  }
+  @include Desktop-m{
+      
+    .product-img {
+        height: 70vh;
+        @include between();
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 18em;
+          margin-block:auto;
+          position: sticky;
+          top: 0;
+        }
+      }
+  }

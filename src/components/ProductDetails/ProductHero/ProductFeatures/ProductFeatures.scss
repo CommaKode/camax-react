@@ -1,0 +1,27 @@
+
+@import "../../../../scss/variables/";
+
+
+
+.product-features {
+  @include between(column);
+  width: 40% !important;
+  margin-inline: auto;
+  div {
+    @include between();
+    justify-content: space-between;
+    span:last-child {
+      margin-right: 0.5em;
+    }
+    span:first-child {
+      color: color(secondary);
+    }
+  }
+}
+
+@include Desktop-m {
+  .product-features {
+    margin-right: 18%;
+    width: 80% !important;
+  }
+}

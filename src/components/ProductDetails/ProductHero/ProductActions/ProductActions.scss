@@ -1,0 +1,79 @@
+@import "../../../../scss/variables";
+
+.product-actions {
+  justify-content: center;
+  .delivery {
+    background-color: #ffdd2c;
+    border-radius: $card-radius;
+    display: none;
+    .delivery-icon {
+      @include box(2em);
+    }
+  }
+  .quantity {
+    display: none;
+  }
+  .buy-action {
+    position: fixed;
+    background-color: color(white);
+    width: 100%;
+    z-index: 999;
+    height: 4em;
+    bottom: 0;
+    @include between();
+    justify-content: center;
+    box-shadow: 10px 10px 15px 2px;
+
+    .buy-action-btn {
+      background-color: color(primary, light);
+      padding: $buy-action-padding-sm;
+      white-space: nowrap;
+      color: color(white, light);
+    }
+  }
+  .buy-action-btn-lg{
+      display: none;
+  }
+}
+
+@include Desktop-m {
+  .product-actions {
+    @include between(column);
+    align-items: center;
+    width: 70% !important;
+    margin-inline: auto;
+    > div {
+      margin-bottom: $element-margin;
+    }
+    .buy-action {
+      display: none;
+    }
+    .buy-action-btn-lg{
+      display: block;
+      justify-content: center;
+      background-color: color(primary, light);
+      color: color(white);
+      width: 100%;
+
+      &:hover {
+        background-color: color(primary);
+      }
+    }
+    .quantity {
+      @include between();
+      border: 1px solid color(black);
+      justify-content: space-evenly;
+      button {
+        @include box(2em);
+        background-color: color(white);
+        justify-content: center;
+      }
+    }
+    .delivery {
+      @include between();
+      padding: $buy-action-padding;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
+}

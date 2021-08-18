@@ -1,0 +1,72 @@
+@import "../../../../scss/variables";
+
+.product-banner {
+  width: 100%;
+  color: color(white);
+
+  .banner {
+    @include Tablet() {
+      @include between(column);
+      height: 10em;
+      justify-content:space-evenly ;
+      .banner-rating{
+        height: 1em;
+      }
+    }
+    background-color: color(secondary);
+    border-radius: $banner-radius;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.5fr 1fr;
+    height: 6em;
+    cursor: pointer;
+    width: 0;
+    margin-inline: auto;
+
+    &:hover {
+      .banner-name {
+        color: color(white, light);
+      }
+    }
+    .banner-name {
+      grid-area: 1 / 1 / 3 / 2;
+      @include between();
+      justify-content: center;
+    }
+    .banner-rating {
+      @include between();
+      margin-top: 0.5em;
+      div {
+        @include between();
+      }
+      .banner-comments,
+      .banner-star {
+        justify-content: space-evenly;
+        span {
+          @include between();
+          svg {
+            @include box(1em);
+            margin-left: 0.5em;
+            fill: color(white, light);
+          }
+        }
+      }
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .banner-price {
+      grid-area: 2 / 2 / 3 / 3;
+      @include between();
+      justify-content: space-around;
+    }
+  }
+}
+
+@include Desktop-m {
+  .product-banner {
+    color: color(white);
+    height: 70%;
+    @include between();
+    justify-content: center;
+    
+  }
+}
