@@ -1,5 +1,5 @@
 {
-  "name": "cmx",
+  "name": "camax",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -59,9 +59,7 @@
     "@storybook/react": "^6.3.6",
     "file-loader": "^6.2.0",
     "gsap": "^3.7.1",
-    "immer": "^9.0.5",
     "node-sass": "^6.0.1",
-    "react-modal": "^3.14.3",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "redux": "^4.1.1",
@@ -71,7 +69,6 @@
     "storybook-rtl-addon": "^0.3.3",
     "style-loader": "^3.2.1",
     "swiper": "^6.8.1",
-    "url-loader": "^4.1.1",
-    "use-immer": "^0.6.0"
+    "url-loader": "^4.1.1"
   }
 }
