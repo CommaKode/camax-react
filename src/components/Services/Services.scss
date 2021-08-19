@@ -14,24 +14,6 @@
   .serv-img {
     @include between(column);
     width: 100%;
-    h1 {
-      margin-bottom: $element-margin;
-      color: color(black);
-      display: flex;
-      flex-direction: column;
-      @include Desktop {
-        flex-direction: row;
-      }
-      @include Desktop-xl {
-        font-size: 4.2rem;
-      }
-      span:last-child {
-        color: color(primary);
-        @include Desktop {
-          margin-right: 0.5pc;
-        }
-      }
-    }
     img {
       width: 100%;
       max-width: 28em;

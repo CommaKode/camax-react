@@ -30,7 +30,7 @@ const MenuItems = [
     options: [
       {
         title: 'گارانتی',
-        url: '/test2',
+        url: '/guarantee',
       },
       {
         title: 'تعمیرات',

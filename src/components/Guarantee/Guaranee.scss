@@ -1,0 +1,60 @@
+@import '../../scss/variables';
+
+.guarantee-section {
+  overflow: hidden;
+  @include between(column);
+
+  @include Desktop-m {
+    flex-direction: row;
+  }
+}
+
+.guar-img {
+  margin-top: $element-margin;
+  width: 100%;
+  @include between(column);
+
+  @include Desktop-m {
+    align-items: flex-start;
+  }
+  img {
+    width: 100%;
+  }
+  h1 {
+    flex-direction: row;
+  }
+}
+
+.guar-text {
+  margin-top: $section-margin;
+  position: relative;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  &::before {
+    @include pseudo();
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: color(secondary, dark);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 0 2em 2em 0;
+  }
+  h4 {
+    color: color(white);
+    font-size: 2rem;
+    margin-bottom: $element-margin;
+    @include Desktop-m {
+      font-size: 2.8rem;
+    }
+  }
+  p {
+    color: color(white, dark);
+  }
+}
+
+.guar-btn {
+  margin-top: $element-margin;
+}
