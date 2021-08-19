@@ -1,0 +1,98 @@
+@import '../../scss/variables';
+
+.service-section {
+  @include between(column-reverse);
+  margin-top: $element-margin;
+
+  @include Desktop-l {
+    flex-direction: row;
+    .serv-img {
+      margin-right: $element-margin;
+    }
+  }
+
+  .serv-img {
+    @include between(column);
+    width: 100%;
+    h1 {
+      margin-bottom: $element-margin;
+      color: color(black);
+      display: flex;
+      flex-direction: column;
+      @include Desktop {
+        flex-direction: row;
+      }
+      @include Desktop-xl {
+        font-size: 4.2rem;
+      }
+      span:last-child {
+        color: color(primary);
+        @include Desktop {
+          margin-right: 0.5pc;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      max-width: 28em;
+    }
+  }
+
+  .serv-form {
+    margin-top: $section-margin;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+
+    @include Desktop-m {
+      width: fit-content;
+    }
+
+    .serv-inp {
+      @include between(column);
+      width: 100%;
+
+      @include Desktop {
+        flex-direction: row;
+        input,
+        select {
+          &:not(:first-of-type) {
+            margin-top: $element-margin;
+          }
+          margin-right: $element-margin;
+        }
+      }
+
+      label {
+        width: 100%;
+        color: color(black);
+        margin: $element-margin 0;
+        white-space: nowrap;
+      }
+      input,
+      select,
+      .serv-text-area {
+        padding: $inp-padding;
+        border-radius: $btn-radius;
+        min-width: 20em;
+        width: 100%;
+      }
+    }
+    .serv-btn {
+      margin-top: $element-margin;
+    }
+  }
+}
+
+.inp-option {
+  cursor: pointer;
+}
+
+.serv-text-area {
+  border: none;
+  outline: none;
+  resize: none;
+  height: 10em;
+}

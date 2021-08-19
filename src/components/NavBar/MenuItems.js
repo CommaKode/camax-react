@@ -34,7 +34,7 @@ const MenuItems = [
       },
       {
         title: 'تعمیرات',
-        url: '/test2',
+        url: '/services',
       },
     ],
   },
