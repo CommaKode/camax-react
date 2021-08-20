@@ -9,25 +9,29 @@
     height: fit-content;
     border-radius: $card-radius;
     margin-inline: auto;
-    background-color: color(secondary, dark);
+    background-color: color(white, light);
     .filter-items-desktop {
       list-style: none;
       @include between(column);
       width: 80%;
       margin: 2em;
       li {
-        background-color: color(white, light);
+        background-color: color(white);
         padding: $filter-items-padding;
         margin-bottom: $element-margin;
         width: 100%;
-        // white-space: nowrap;
         border-radius: $btn-radius;
+        svg{
+          @include box(1em);
+          margin-left: 3em;
+
+        }
         @include between();
         label {
           margin-right: 3em;
         }
         input {
-          margin-left: 3em;
+          display: none;
         }
       }
     }

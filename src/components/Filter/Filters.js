@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./filter.scss";
 import { Options } from "../Detail-Lists/Monitor";
 import FilterIcon from "../../Images/icons/filter.svg";
@@ -8,16 +8,17 @@ import PopUp from "../PopUp/PopUp";
 import { useSelector, useDispatch } from "react-redux";
 import "./sort.scss";
 import Sort from "./Sort";
+import Tick from "./Tick";
+import { useRef } from "react";
 
 const Filters = React.memo((props) => {
-
   
   const filterPopUp = useSelector((state) => state.popUp.filterPopUp);
   const sortPopUp = useSelector((state) => state.popUp.sortPopUp);
+  const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
-
-
-
+  
+  
   const btns = [
     "پربازدید ترین",
     "پرفروش ترین",
@@ -26,8 +27,6 @@ const Filters = React.memo((props) => {
     "ارزان ترین",
     "گران ترین",
   ];
-
-
 
   return (
     <aside className="filters">
@@ -82,12 +81,125 @@ const Filters = React.memo((props) => {
           animDuration={1.5}
           animEase={"slow(0.7, 0.7, false)"}
         />
-        {Options.map((item, index) => (
-          <li key={index}>
+        {/* {Options.map((item, index) => (
+          <li
+            key={index}
+            onClick={()=>clickHandler(index)} 
+        className= {tickTrigger.includes(`${index}`) ? "active" : "na"} 
+          >
             <label htmlFor={`filter-${index}`}>{item}</label>
             <input id={`filter-${index}`} type="checkbox" />
+            <Tick />
+
+
           </li>
-        ))}
+        ))} */}
+
+        <li
+        // onClick={()=>dispatch(type:)}
+        // className={tickTrigger.includes(`${index}`) ? "active" : "na"}
+        >
+          <label htmlFor={`filter-1}`}>فیلتر قیمت</label>
+          <input id={`filter-1`} type="checkbox" />
+          <Tick />
+        </li>
+        <li
+        // onClick={() => clickHandler(index)}
+        // className={tickTrigger.includes(`${index}`) ? "active" : "na"}
+        >
+          <label htmlFor={`filter-2}`}> سایز صفحه نمایش</label>
+          <input id={`filter-2`} type="checkbox" />
+          <Tick />
+        </li>
+        <li
+          onClick={() => dispatch({ type: "sdHandle" })}
+          className={filter.sd ? "active" : ""}
+        >
+          <label htmlFor={`filter-3}`}>حافظه</label>
+          <input id={`filter-3`} type="checkbox" />
+          <Tick />
+        </li>
+        <li
+          onClick={() => dispatch({ type: "intercommunicateHandle" })}
+          className={filter.intercommunicate ? "active" : ""}
+        >
+          <label htmlFor={`filter-4}`}>ارتباط داخلی</label>
+          <input id={`filter-4`} type="checkbox" />
+          <Tick />
+        </li>
+        <li
+          onClick={() => dispatch({ type: "handyPhoneHandle" })}
+          className={filter.handyPhone ? "active" : ""}
+        >
+          <label htmlFor={`filter-5}`}>گوشی</label>
+          <input id={`filter-5`} type="checkbox" />
+          <Tick />
+        </li>
+        <li
+          onClick={() => dispatch({ type: "parkingOpenerHandle" })}
+          className={filter.parkingOpener ? "active" : ""}
+        >
+          <label htmlFor={`filter-6}`}>باز کن درب پارکینگ</label>
+          <input id={`filter-6`} type="checkbox" />
+          <Tick />
+        </li>
+        <li
+        //  onClick={() => dispatch({ type: "intercommunicateHandle" })}
+        // className={tickTrigger.includes(`${index}`) ? "active" : "na"}
+        >
+          <label htmlFor={`filter-7}`}>نوع صفحه ی نمایش</label>
+          <input id={`filter-7`} type="checkbox" />
+          <Tick />
+        </li>
+        <li
+          onClick={() => dispatch({ type: "cartHandle" })}
+          className={filter.cart ? "active" : ""}
+        >
+          <label htmlFor={`filter-8}`}>کارتخوان</label>
+          <input id={`filter-8`} type="checkbox" />
+          <Tick />
+        </li>
+        <li
+          onClick={() => dispatch({ type: "mobileConnectHandle" })}
+          className={filter.mobileConnect ? "active" : ""}
+        >
+          <label htmlFor={`filter-8}`}>اتصال تلفن به مونیتور</label>
+          <input id={`filter-8`} type="checkbox" />
+          <Tick />
+        </li>
+        <li
+          onClick={() => dispatch({ type: "cameraHandle" })}
+          className={filter.camera ? "active" : ""}
+        >
+          <label htmlFor={`filter-8}`}>اتصال به دوربین دیگر</label>
+          <input id={`filter-8`} type="checkbox" />
+          <Tick />
+        </li>
+        <li
+          onClick={() => dispatch({ type: "twoPanelConnectHandle" })}
+          className={filter.twoPanelConnect ? "active" : ""}
+        >
+          <label htmlFor={`filter-8}`}>اتصال به دو پنل بیرونی</label>
+          <input id={`filter-8`} type="checkbox" />
+          <Tick />
+        </li>
+        <li
+          onClick={() => dispatch({ type: "guardHandle" })}
+
+          className={filter.guard ? "active" : ""}
+        >
+          <label htmlFor={`filter-8}`}>اتصال به گارد نگهبانی</label>
+          <input id={`filter-8`} type="checkbox" />
+          <Tick />
+        </li>
+        <li
+          onClick={() => dispatch({ type: "extraLockHandle" })}
+          className={filter.extraLock ? "active" : ""}
+        >
+          <label htmlFor={`filter-8}`}>قفل اضافه</label>
+          <input id={`filter-8`} type="checkbox" />
+          <Tick />
+        </li>
       </ul>
     </aside>
   );

@@ -28,7 +28,7 @@ export const Options = [
   "قفل اضافه",
 ];
 // export const detailPageOption = [
-//  {name: "حافظه",sd},
+//  {name: "حافظه",ac},
 //  {name: "ارتباط داخلی",intercommunicate},
 // { name: "گوشی",handyPhone},
 //   {name:"باز کن درب پارکینگ",parkingOpener},
