@@ -26,7 +26,7 @@ const Guarantee = () => {
           اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
           قرار گیرد.
         </p>
-        <Button title="صفحه محصولات" variant="btn-primary guar-btn" />
+        <Button title="صفحه تعمیرات" variant="btn-primary guar-btn" />
       </div>
     </div>
   );

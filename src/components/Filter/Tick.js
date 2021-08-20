@@ -12,7 +12,7 @@ const Tick = () => {
     }
   return (
     <>
-      <div class="trigger"></div>
+      <div className="trigger"></div>
       <svg
         version="1.1"
         id="tick"
@@ -25,13 +25,13 @@ const Tick = () => {
         xmlSpace="preserve"
       >
         <path
-          class="circ path"
+          className="circ path"
           style={pathStyle}
           d="
 	M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"
         />
         <polyline
-          class="tick path"
+          className="tick path"
           style={pathStyle}
           points="
 	11.6,20 15.9,24.2 26.4,13.8 "
