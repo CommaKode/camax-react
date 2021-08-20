@@ -3,11 +3,10 @@
 .commentForm {
   @include between(column);
   h3 {
-      margin : $section-margin 0;
-      @include Desktop-m {
-        margin : $section-margin $section-margin $section-margin auto;
-        
-      }
+    margin: $section-margin 0;
+    @include Desktop-m {
+      margin: $section-margin $section-margin $section-margin auto;
+    }
   }
   > div {
     width: 100%;
@@ -17,6 +16,7 @@
   }
   ul {
     @include between(column);
+
     li {
       @include between();
       width: 100%;
@@ -27,6 +27,7 @@
         border-radius: $card-radius;
         border: 1px solid color(white, dark);
       }
+
       span {
         margin: 0 auto 0 1em;
         svg {
@@ -43,4 +44,14 @@
     padding: 1em 3em;
     margin-left: 1em;
   }
+}
+
+#comment-input-4 {
+  height: 7em;
+  border-radius: $card-radius;
+  border: 1px solid color(white, dark);
+  outline: none;
+  resize: none;
+  padding: 0.5em 2em;
+  
 }

@@ -30,9 +30,9 @@ const CommentForm = () => {
           <li>
             <label htmlFor={"comment-input-4"}>توضیحات</label>
             <span>*</span>
-            <input id={"comment-input-4"} type="text"/>
+            <textArea id={"comment-input-4"} name={"comment-input-4"} rows={4} cols={18}/>  
           </li>
-         <Button variant="btn-secondary" title={"ثبت دیدگاه"}/>
+         <Button variant="btn-secondary" title={"ثبت دیدگاه"} />
         </ul>
       </div>
     </div>
