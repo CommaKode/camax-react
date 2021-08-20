@@ -26,10 +26,10 @@ $serach-m-padding: $m-btn-padding 1.5em $m-btn-padding 4em;
 
 // * button padding
 $btn-padding: 0.6em 1.2em;
-$sort-btn-padding: .3em .7em;
-$filter-items-padding: .5em 0;
-$buy-action-padding-sm:.5em 30%;
-$buy-action-padding:.5em 0;
+$sort-btn-padding: 0.3em 0.7em;
+$filter-items-padding: 0.5em 0;
+$buy-action-padding-sm: 0.5em 30%;
+$buy-action-padding: 0.5em 0;
 
 
 // * element padding
@@ -37,15 +37,18 @@ $buy-action-padding:.5em 0;
 $element-padding:1em;
 
 // * revuew container padding
-$review-padding:2em;
+$review-padding: 2em;
 
 // * card padding
 $card-padding: 0 1em;
 $info-card-padding: 1em;
-$sort-card-padding: .5em;
+$sort-card-padding: 0.5em;
 
 // * Filter tools like sort and mobile filter padding
 $filter-tools-padding: 1.5em 4.5em;
+
+// * service page input paddings
+$inp-padding: 0.7em 1.5em;
 
 // !
 // ! margins
@@ -70,7 +73,7 @@ $btn-radius: 1em;
 $fixed-nav-radius: 2em 2em 0 0;
 
 // * banner radius
-$banner-radius : 1.7em;
+$banner-radius: 1.7em;
 
 // !
 // ! transition
