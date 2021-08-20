@@ -5,6 +5,7 @@ import ReviewContainer from "./ReviewContainer";
 import { HashLink as Link } from "react-router-hash-link";
 import "./ProductReview.scss";
 import Comments from '../Comments/Comments';
+import CommentForm from "../Comments/CommentForm";
 
 
 const ProductReview = (props) => {
@@ -97,6 +98,8 @@ const ProductReview = (props) => {
       
       />
 
+
+<CommentForm />
     </div>
   );
 };

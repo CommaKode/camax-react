@@ -1,0 +1,46 @@
+@import "../../../scss/variables";
+
+.commentForm {
+  @include between(column);
+  h3 {
+      margin : $section-margin 0;
+      @include Desktop-m {
+        margin : $section-margin $section-margin $section-margin auto;
+        
+      }
+  }
+  > div {
+    width: 100%;
+    @include Desktop-m {
+      width: 40%;
+    }
+  }
+  ul {
+    @include between(column);
+    li {
+      @include between();
+      width: 100%;
+      padding: $element-padding;
+
+      input {
+        padding: 0.5em 2em;
+        border-radius: $card-radius;
+        border: 1px solid color(white, dark);
+      }
+      span {
+        margin: 0 auto 0 1em;
+        svg {
+          @include box(1em);
+        }
+      }
+    }
+  }
+  button {
+    margin: $section-margin 0;
+    background-color: color(secondary, dark);
+    color: color(white);
+    margin-right: auto;
+    padding: 1em 3em;
+    margin-left: 1em;
+  }
+}
