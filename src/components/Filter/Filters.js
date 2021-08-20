@@ -12,13 +12,11 @@ import Tick from "./Tick";
 import { useRef } from "react";
 
 const Filters = React.memo((props) => {
-  
   const filterPopUp = useSelector((state) => state.popUp.filterPopUp);
   const sortPopUp = useSelector((state) => state.popUp.sortPopUp);
   const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
-  
-  
+
   const btns = [
     "پربازدید ترین",
     "پرفروش ترین",
@@ -76,10 +74,12 @@ const Filters = React.memo((props) => {
       />
       <ul className="filter-items-desktop">
         <Sort
+          title="مرتب سازی"
           containerVariant={"sort-container"}
           btnTitles={btns}
           animDuration={1.5}
           animEase={"slow(0.7, 0.7, false)"}
+          btnVariant="sort-btn"
         />
         {/* {Options.map((item, index) => (
           <li
@@ -103,14 +103,14 @@ const Filters = React.memo((props) => {
           <input id={`filter-1`} type="checkbox" />
           <Tick />
         </li>
-        <li
-        // onClick={() => clickHandler(index)}
-        // className={tickTrigger.includes(`${index}`) ? "active" : "na"}
-        >
-          <label htmlFor={`filter-2}`}> سایز صفحه نمایش</label>
-          <input id={`filter-2`} type="checkbox" />
-          <Tick />
-        </li>
+        <Sort
+          title="سایز صفحه ی نمایش"
+          containerVariant={"sort-container"}
+          btnTitles={[4.3, 5, 6.6]}
+          animDuration={1.5}
+          animEase={"slow(0.7, 0.7, false)"}
+          btnVariant="filter-btn"
+        />
         <li
           onClick={() => dispatch({ type: "sdHandle" })}
           className={filter.sd ? "active" : ""}
@@ -143,14 +143,14 @@ const Filters = React.memo((props) => {
           <input id={`filter-6`} type="checkbox" />
           <Tick />
         </li>
-        <li
-        //  onClick={() => dispatch({ type: "intercommunicateHandle" })}
-        // className={tickTrigger.includes(`${index}`) ? "active" : "na"}
-        >
-          <label htmlFor={`filter-7}`}>نوع صفحه ی نمایش</label>
-          <input id={`filter-7`} type="checkbox" />
-          <Tick />
-        </li>
+        <Sort
+          title="نوع صفحه ی نمایش"
+          containerVariant={"sort-container"}
+          btnTitles={["لمسی","ساده"]}
+          animDuration={1.5}
+          animEase={"slow(0.7, 0.7, false)"}
+          btnVariant="filter-btn"
+        />
         <li
           onClick={() => dispatch({ type: "cartHandle" })}
           className={filter.cart ? "active" : ""}
@@ -185,7 +185,6 @@ const Filters = React.memo((props) => {
         </li>
         <li
           onClick={() => dispatch({ type: "guardHandle" })}
-
           className={filter.guard ? "active" : ""}
         >
           <label htmlFor={`filter-8}`}>اتصال به گارد نگهبانی</label>

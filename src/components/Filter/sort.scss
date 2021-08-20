@@ -31,9 +31,29 @@
 .show{
   opacity: 1 !important;
 }
-.sort-btn {
+.sort-btn,.filter-btn {
   width: 100%;
   background-color: color(white, light);
   margin-bottom: $element-margin;
   z-index: 2;
+  padding-right: 3em;
+  .btn-icon{
+    svg{
+      transition: $main-transition;
+      transform:rotateX(180deg);
+    }
+  }
+  
+}
+
+.filter-btn{
+  background-color: color(white,light);
+}
+
+.rotate {
+ .btn-icon{
+  svg{
+    transform: rotateY(-180deg);
+  }
+ }
 }

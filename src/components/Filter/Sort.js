@@ -1,21 +1,24 @@
 import React, { useRef, useState, useEffect } from "react";
 import { TweenMax } from "gsap";
 import Button from "../Buttons/Button";
+import {ReactComponent as Arrow} from '../../Images/icons/arrow.svg';
 
 export const Sort = (props) => {
   let container = useRef(null);
   const {
     containerVariant,
     btnTitles,
-    // btnVariant,
     animEase,
     animDuration,
+    title,
+    btnVariant,
   } = props;
 
   const [ShowSort, setShowSort] = useState(false);
   const [DropDown, setDropDown] = useState("");
   const [Show, setShow] = useState("fade");
-
+  const [Rotate, setRotate] = useState(false);
+  
 
   let height = `${btnTitles.length * 3.4}em`;
 
@@ -51,11 +54,14 @@ export const Sort = (props) => {
   return (
     <>
       <Button
-        title={"مرتب سازی"}
-        variant={"sort-btn"}
+        title={title}
+        variant={`${btnVariant} ${Rotate? "rotate":" "}`}
         onClick={() => {
           setShowSort(!ShowSort);
+          setRotate(!Rotate);
+
         }}
+        Icon={Arrow}
       />
       <div
         className={containerVariant}
