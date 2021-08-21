@@ -9,18 +9,20 @@
     height: fit-content;
     border-radius: $card-radius;
     margin-inline: auto;
-    background-color: color(secondary, light);
+    background-color: color(secondary);
     .filter-items-desktop {
       list-style: none;
       @include between(column);
       width: 80%;
       margin: 2em;
       li {
-        background-color: color(white,light);
+        background-color: color(secondary,light);
         padding: $filter-items-padding;
         margin-bottom: $element-margin;
         width: 100%;
         border-radius: $btn-radius;
+  color: color(white);
+
         svg{
           @include box(1em);
           margin-left: 3em;

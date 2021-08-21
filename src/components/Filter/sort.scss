@@ -33,10 +33,11 @@
 }
 .sort-btn,.filter-btn {
   width: 100%;
-  background-color: color(white, light);
+  background-color: color(secondary, light);
   margin-bottom: $element-margin;
   z-index: 2;
   padding-right: 3em;
+  color: color(white);
   .btn-icon{
     svg{
       transition: $main-transition;
@@ -47,7 +48,7 @@
 }
 
 .filter-btn{
-  background-color: color(white,light);
+  background-color: color(secondary,light);
 }
 
 .rotate {
