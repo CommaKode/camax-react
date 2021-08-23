@@ -20,18 +20,21 @@
   @include between(column);
   .comment-card {
     position: relative;
-    padding: 0 $section-margin;
     margin-bottom: $section-margin;
     margin-left: auto;
     @include between();
     width: 100%;
     justify-content: flex-start;
+    @include Desktop-m{
+      padding: 0 $section-margin;
 
+    }
     .c-information {
       @include between(column);
       justify-content: center;
       color: color(white, dark);
       width: 45%;
+      padding:2em;
       span {
         margin: $element-margin 0;
       }
@@ -55,15 +58,21 @@
     
   }
   .strengths-card {
-    padding: 0 $section-margin;
     margin-bottom: $section-margin;
-    margin-left: auto;
+    text-align: center;
     @include between();
     width: 100%;
     justify-content: flex-start;
+    
+    @include Desktop-m{
+      padding: 0 $section-margin;
+
+    }
     .strengths-title {
       width: 45%;
       color: color(white, dark);
+      padding:2em;
+      
       @include Desktop-m{
         width: 25%;
         text-align: center;
