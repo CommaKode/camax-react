@@ -20,8 +20,8 @@ const Comment = (props) => {
         <div className={"strengths-title"}>نقاط ضعف و نقاط قوت</div>
         <span></span>
         <div className="strengths">
-          <span classname={"positive"}><Like/> اهنگ میزنه</span>
-          <span classname={"negative"}><Dislike/>  فقط خاموش میشه</span>
+          <span classname={"positive"}><Like/> نقطه قوت 1</span>
+          <span classname={"negative"}><Dislike/>  نقطه ضعف 1</span>
         </div>
       </div>
     </div>
