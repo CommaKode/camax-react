@@ -16,20 +16,22 @@
     top: 100%;
   }
   margin-bottom: $section-margin;
+  width: 100%;
   @include between(column);
   .comment-card {
+    position: relative;
     padding: 0 $section-margin;
     margin-bottom: $section-margin;
     margin-left: auto;
     @include between();
     width: 100%;
     justify-content: flex-start;
+
     .c-information {
       @include between(column);
       justify-content: center;
-      padding: 1em 2em;
-      width: 33% !important;
       color: color(white, dark);
+      width: 45%;
       span {
         margin: $element-margin 0;
       }
@@ -49,9 +51,8 @@
         right: 0;
         top: 0;
       }
-      width: 100%;
     }
-
+    
   }
   .strengths-card {
     padding: 0 $section-margin;
@@ -60,13 +61,12 @@
     @include between();
     width: 100%;
     justify-content: flex-start;
-
     .strengths-title {
       width: 45%;
-      padding: 1em 2em;
       color: color(white, dark);
       @include Desktop-m{
         width: 25%;
+        text-align: center;
       }
     }
     .strengths {

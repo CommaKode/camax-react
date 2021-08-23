@@ -13,10 +13,12 @@ const Comment = (props) => {
           <span className="c-name">محمد معلمی</span>
           <span className="c-date">1400/5/24</span>
         </div>
+        <span></span>
         <p className="comment">اگر گرون تر بود میخریدم</p>
       </div>
       <div className="strengths-card">
         <div className={"strengths-title"}>نقاط ضعف و نقاط قوت</div>
+        <span></span>
         <div className="strengths">
           <span classname={"positive"}><Like/> اهنگ میزنه</span>
           <span classname={"negative"}><Dislike/>  فقط خاموش میشه</span>
