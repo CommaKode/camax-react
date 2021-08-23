@@ -29,7 +29,6 @@ export const ProductDetailPage = (props) => {
     //         return resp.json();
     //       })
     //       .then((res) => {
-    //         console.log(res,"detail");
     //        return setlist(res)
     //       })
     //       .catch((err) => {

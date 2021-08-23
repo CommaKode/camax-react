@@ -1,21 +1,6 @@
 @import "../../scss/variables";
 
-.product-page {
-  // position: relative;
-  // display: grid;
-  // grid-template-columns: repeat(4, 1fr);
-  // // grid-template-rows: 1fr 2fr repeat(3, 1fr);
-  // grid-template-rows: repeat(3, 1fr);
-  // grid-column-gap: 15px;
-  // // grid-row-gap: 1em;
 
-  // .header { grid-area: 1 / 1 / 2 / 5; }
-  // .product-main { grid-area: 2 / 1 / 3 / 4; }
-  // .div3 { grid-area: 2 / 4 / 3 / 5; }
-  // .div4 { grid-area: 3 / 1 / 4 / 5; }
-  // .div5 { grid-area: 4 / 1 / 5 / 5; }
-  // .page-footer { grid-area: 5 / 1 / 6 / 5; }
-}
 .product-main {
   display: grid;
   grid-template-columns: 1fr;
@@ -49,75 +34,3 @@
 .product-grid > * {
   margin-inline: auto;
 }
-// .filter {
-//   display: flex;
-//   flex-direction: column;
-//   background-color: $filterBgcolor;
-//   border-radius: $filterContainerRadius;
-//   height: fit-content;
-//   padding: $filterContainerPadding;
-//   h2 {
-//     display: none;
-//     text-align: center;
-//     color: $white;
-//     @include filterInSmall {
-//       display: block;
-//     }
-//     svg {
-//       position: relative;
-//       width: 25px;
-//       height: 25px;
-//       top: 5px;
-//     }
-//   }
-//   @include filterInSmall {
-//     #accordion-1 {
-//       margin-top: 20px;
-//     }
-//   }
-//   ul {
-//     display: none;
-//     height: 35px;
-//     position: relative;
-//     transition: all 0.5s ease;
-//     background-color: $filterULcolor;
-//     border-radius: $radiusPrimary;
-//     margin-bottom: $filterUlMargin;
-//     padding: $filterUlPadding;
-//     border: $filterUlBorder;
-//     color: $white;
-//     white-space: nowrap;
-//     > span {
-//       padding-right: 10px;
-//       display: flex;
-//       justify-content: space-between;
-//       svg {
-//         padding-bottom: 10px;
-//       }
-//     }
-//     @include filterInLg {
-//       display: flex !important;
-//       flex-direction: column;
-
-//     }
-//   }
-// }
-// .filterItems {
-//   display: none;
-//   flex-direction: column;
-//   position: relative;
-//   top: -19px;
-//   border-radius: $filterItemsRadius;
-//   background-color: $white;
-//   padding: $filterItemsPadding;
-
-//   span {
-//     display: flex;
-//     padding-right: 10px;
-//     align-items: center;
-//     label {
-//       padding-right: 10px;
-//       color: $black;
-//     }
-//   }
-// }
