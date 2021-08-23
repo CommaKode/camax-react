@@ -1,22 +1,22 @@
-import React from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const List = (props) => {
-  const { url, cName, title, options, ...rest } = props;
+  const { url, cName, title, options, clk, ...rest } = props;
 
-  const [click, setClick] = useState("sub-uc");
-  const [rotate, setRotate] = useState("arrow-uc");
+  const [click, setClick] = useState('sub-uc');
+  const [rotate, setRotate] = useState('arrow-uc');
 
   const clickHandler = () => {
     switch (click) {
-      case "sub-uc":
-        setClick("sub-c");
-        setRotate("arrow-c");
+      case 'sub-uc':
+        setClick('sub-c');
+        setRotate('arrow-c');
         break;
       default:
-        setClick("sub-uc");
-        setRotate("arrow-uc");
+        setClick('sub-uc');
+        setRotate('arrow-uc');
     }
   };
 
@@ -47,14 +47,16 @@ const List = (props) => {
       <ul className={`sub-list ${click}`}>
         {options.map((option, index) => (
           <li key={index}>
-            <Link to={option.url}>{option.title}</Link>
+            <Link to={option.url} onClick={clk}>
+              {option.title}
+            </Link>
           </li>
         ))}
       </ul>
     </li>
   ) : (
     <li className="list">
-      <Link to={url} className={cName} {...rest}>
+      <Link to={url} className={cName} onClick={clk} {...rest}>
         {title}
       </Link>
     </li>

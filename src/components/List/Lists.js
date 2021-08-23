@@ -3,7 +3,7 @@ import List from './List';
 import './Lists.scss';
 
 const Lists = (props) => {
-  const { items, cName, ...rest } = props;
+  const { items, cName, clk, ...rest } = props;
 
   return (
     <ul className={`ul-list ${cName}`} {...rest}>
@@ -14,6 +14,7 @@ const Lists = (props) => {
           title={item.title}
           options={item.options}
           key={index}
+          clk={clk}
         />
       ))}
     </ul>

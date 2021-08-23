@@ -6,6 +6,7 @@ import NavMenu from './NavMenu';
 const NavBar = (props) => {
   const { ...rest } = props;
   const [click, setClick] = useState('unClicked');
+  const [active, setActive] = useState('');
   const [cNames, setCNames] = useState({
     icons: 'icon-color-switch-uc',
     list: 'nav-list-uc',
@@ -27,12 +28,25 @@ const NavBar = (props) => {
         });
     }
   };
+  const hamClickHandler = () => {
+    switch (active) {
+      case 'active':
+        setActive('');
+        break;
+      default:
+        setActive('active');
+    }
+  };
+  const clk = () => {
+    clickHandler();
+    hamClickHandler();
+  };
   const { icons, list } = cNames;
   return (
-    <nav className="header" {...rest} >
+    <nav className="header" {...rest}>
       <div className={`navbar container `}>
         <span className={`before ${list}`}></span>
-        <HamButton clk={clickHandler} />
+        <HamButton clk={clk} cName={active} />
         <a href="/home" className="nav-logo">
           <span>
             <svg
@@ -87,7 +101,7 @@ const NavBar = (props) => {
           </span>
         </a>
       </div>
-      <NavMenu list={list} />
+      <NavMenu list={list} clk={clk} />
     </nav>
   );
 };
