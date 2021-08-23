@@ -3,7 +3,8 @@ import "./comments.scss";
 import Comment from "./Comment";
 
 const Comments = (props) => {
-  const { commentsList , id } = props;
+  const { id } = props;
+  // const { commentsList  } = props;
   return (
     <div className={"comments-section"} id={id}>
       <h3>نظرات کاربران</h3>

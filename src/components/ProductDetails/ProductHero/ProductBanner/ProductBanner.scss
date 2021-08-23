@@ -57,6 +57,9 @@
       grid-area: 2 / 2 / 3 / 3;
       @include between();
       justify-content: space-around;
+      span{
+        margin-left: 1em;
+      }
     }
   }
 }

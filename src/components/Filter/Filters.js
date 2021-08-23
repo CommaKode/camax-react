@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+// import  { useEffect, useState,useRef } from "react";
 import "./filter.scss";
 import { Options } from "../Detail-Lists/Monitor";
 import FilterIcon from "../../Images/icons/filter.svg";
@@ -9,7 +10,6 @@ import { useSelector, useDispatch } from "react-redux";
 import "./sort.scss";
 import Sort from "./Sort";
 import Tick from "./Tick";
-import { useRef } from "react";
 
 const Filters = React.memo((props) => {
   const filterPopUp = useSelector((state) => state.popUp.filterPopUp);

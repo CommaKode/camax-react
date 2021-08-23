@@ -4,26 +4,25 @@
 //     max-width: 250px;
 //     margin: 0 auto;
 // }
-.circ{
-    opacity: 0;
-    stroke-dasharray: 130;
-    stroke-dashoffset: 130;
-   
-    transition: all .2s;
+.circ {
+  opacity: 0;
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+
+  transition: all 0.2s;
 }
-.tick{
-    stroke-dasharray: 50;
-    stroke-dashoffset: 50;
-    
-    transition: stroke-dashoffset .2s 0.5s ease-out;
+.tick {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  transition: stroke-dashoffset 0.2s 0.5s ease-out;
 }
 // .active + .trigger + svg .path{
 //     opacity: 1;
 //     stroke-dashoffset: 0;
 // }
 .active {
-   .trigger + svg .path{
+  .trigger + svg .path {
     opacity: 1;
     stroke-dashoffset: 0;
-   }
+  }
 }

@@ -1,7 +1,6 @@
 @import "../../../scss/variables";
 
 .ReviewContainer {
-
   width: 90%;
   background-color: color(white);
   min-height: 13.5em;
@@ -34,45 +33,46 @@
       }
     }
   }
-  @include Desktop-m{
+  @include Desktop-m {
     // background-color: transparent;
     height: 100% !important;
-   > span{display: none;}
-   
+    > span {
+      display: none;
+    }
   }
 }
 
 .review-nav {
-
   display: none;
-  margin: $section-margin 2em;
-
+  margin: $section-margin 0;
+  @include Desktop-m {
+    margin: $section-margin 2em;
+  }
+  @include between();
+  position: sticky;
+  top: 0;
+  background-color: color(white, light);
+  padding: 2em 2em;
+  z-index: 99;
+  ul {
     @include between();
-    position: sticky;
-    top: 0;
-    background-color: color(white,light);
-    padding: 2em 2em;
-    z-index: 99;
-    ul {
-      @include between();
-      position: absolute;
-      li {
-        margin: 0 $element-margin;
-        position: relative;
-        
-        a {
-          color: color(black, dark);
-          &:hover {
-            color: color(primary, light);
-          }
+    position: absolute;
+    li {
+      margin: 0 $element-margin;
+      position: relative;
+
+      a {
+        color: color(black, dark);
+        &:hover {
+          color: color(primary, light);
         }
       }
     }
-  
+  }
 }
 
 .selected {
-  color:color(primary) !important;
+  color: color(primary) !important;
   &::after {
     @include pseudo();
     border-bottom: 2px solid;

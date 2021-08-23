@@ -20,7 +20,6 @@
   .comment-card {
     padding: 0 $section-margin;
     margin-bottom: $section-margin;
-
     margin-left: auto;
     @include between();
     width: 100%;
@@ -29,11 +28,13 @@
       @include between(column);
       justify-content: center;
       padding: 1em 2em;
-      width: 25%;
-
+      width: 33% !important;
       color: color(white, dark);
       span {
         margin: $element-margin 0;
+      }
+      @include Desktop-m{
+        width: 25%;
       }
     }
     .comment {
@@ -48,7 +49,9 @@
         right: 0;
         top: 0;
       }
+      width: 100%;
     }
+
   }
   .strengths-card {
     padding: 0 $section-margin;
@@ -59,9 +62,12 @@
     justify-content: flex-start;
 
     .strengths-title {
-      width: 25%;
+      width: 45%;
       padding: 1em 2em;
       color: color(white, dark);
+      @include Desktop-m{
+        width: 25%;
+      }
     }
     .strengths {
       position: relative;
@@ -82,6 +88,7 @@
       span {
         @include between();
         justify-content: flex-start;
+        margin-bottom: 2em;
       }
     }
   }

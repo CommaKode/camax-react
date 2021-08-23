@@ -3,13 +3,13 @@ import "./tick.scss";
 import React from "react";
 
 const Tick = () => {
-    const pathStyle ={
-        fill:"none",
-        stroke:"#000",
-        strokeWidth:"3",
-        strokeLinejoin:"round",
-        strokeMiterlimit:"10",
-    }
+  const pathStyle = {
+    fill: "none",
+    stroke: "#000",
+    strokeWidth: "3",
+    strokeLinejoin: "round",
+    strokeMiterlimit: "10",
+  };
   return (
     <>
       <div className="trigger"></div>
@@ -21,7 +21,7 @@ const Tick = () => {
         x="0px"
         y="0px"
         viewBox="0 0 37 37"
-        style={{enableBackground:"new 0 0 37 37"}}
+        style={{ enableBackground: "new 0 0 37 37" }}
         xmlSpace="preserve"
       >
         <path
