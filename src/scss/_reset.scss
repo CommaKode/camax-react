@@ -48,6 +48,13 @@ body {
   // *erase 👇 before building
   direction: rtl;
   // *erase 👆 before building
+
+  &:first-of-type {
+    margin-top: $mobile-nav-margin;
+    @include Desktop-xl {
+      margin-top: $desktop-nav-margin;
+    }
+  }
 }
 ul {
   list-style: none;
