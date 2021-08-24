@@ -101,7 +101,7 @@ const NavBar = (props) => {
           </span>
         </a>
       </div>
-      <NavMenu list={list} clk={clk} />
+      <NavMenu list={list} clk={clk} isClicked={click} />
     </nav>
   );
 };

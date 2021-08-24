@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Search from './Search/Search';
 import MobileSignBtn from './MobileSignButton/MobileSignBtn';
 import Lists from '../List/Lists';
 import MenuItems from './MenuItems';
 
 const NavMenu = (props) => {
-  const { list, clk, ...rest } = props;
+  const { list, clk, isClicked, ...rest } = props;
+
+  useEffect(() => {
+    if (isClicked === 'clicked') {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isClicked]);
+
   return (
     <div className={`nav-menu ` + list} {...rest}>
       <div className="container">
