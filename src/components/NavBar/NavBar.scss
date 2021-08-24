@@ -108,3 +108,19 @@
 .nav-list-c {
   transform: translateX(0);
 }
+
+// * scroll bar sticky
+
+.header-sec {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: $secondary-transition;
+}
+
+.scroll-down {
+  transform: translateY(-100%);
+}
