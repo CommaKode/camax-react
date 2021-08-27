@@ -44,7 +44,7 @@
     @include Desktop-l {
       flex-direction: row;
       justify-content: flex-start;
-      button {
+      a {
         margin-top: 0;
         &:not(:first-child) {
           margin-right: $element-margin;
@@ -52,7 +52,7 @@
       }
     }
 
-    button {
+    a {
       color: color(white, light);
       margin-top: $element-margin;
     }

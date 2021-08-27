@@ -19,9 +19,10 @@ const Hero = (props) => {
             <h2 className="lighting">و لوازم روشنایی</h2>
           </div>
           <div className="hero-btns">
-            <Button title="خرید محصول" variant="btn-primary" />
+            <Button title="خرید محصول" url="/products" variant="btn-primary" />
             <Button
               title="خدمات پس از فروش"
+              url="/services"
               variant="btn-secondary"
               Icon={ServIcon}
             />

@@ -13,9 +13,13 @@ const PageNotFound = () => {
           <Heading title="صفحه موردنظر شما پیدا نشد" />
           <p>شاید آن را در لینک های زیر پیدا کنید 👇</p>
           <div className="btns-404">
-            <Button title="صفحه اول" variant="first-btn" />
-            <Button title="محصولات" variant="second-btn" />
-            <Button title="خدمات پس از فروش" variant="last-btn" />
+            <Button title="صفحه اول" url="/" variant="first-btn" />
+            <Button title="محصولات" url="products" variant="second-btn" />
+            <Button
+              title="خدمات پس از فروش"
+              url="services"
+              variant="last-btn"
+            />
           </div>
         </div>
       </div>
