@@ -18,7 +18,7 @@ const Nav = () => {
         setScroll('scroll-down');
       }
       if (currentScroll < lastScroll && scroll === 'scroll-down') {
-        setScroll('');
+        setScroll('scroll-up');
       }
 
       lastScroll = currentScroll;
