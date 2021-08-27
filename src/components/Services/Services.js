@@ -12,7 +12,7 @@ const Services = () => {
     <div className="service-section container">
       <ServicesForm data={ServiceFormData} />
       <div className="serv-img">
-        <Heading title="خدمات پس از فروش" />
+        <Heading title="خدمات پس از فروش" heading="کامکث" />
         <img src={pic} alt="services" />
       </div>
     </div>

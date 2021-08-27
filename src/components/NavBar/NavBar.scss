@@ -8,7 +8,7 @@
   position: relative;
   width: 100%;
   display: block;
-  @include Desktop-xl {
+  @include Desktop-l {
     display: none;
   }
 }

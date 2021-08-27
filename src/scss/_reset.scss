@@ -51,7 +51,7 @@ body {
 
   &:first-of-type {
     margin-top: $mobile-nav-margin;
-    @include Desktop-xl {
+    @include Desktop-l {
       margin-top: $desktop-nav-margin;
     }
   }

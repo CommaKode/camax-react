@@ -1,0 +1,85 @@
+@import '../../scss/variables';
+
+.container-404 {
+  @include between(column);
+  @include Desktop-l {
+    flex-direction: row-reverse;
+  }
+
+  .img-404 {
+    width: 90%;
+    margin-top: $element-margin;
+    @include Desktop-l {
+      width: 40%;
+      max-height: 70vh;
+    }
+  }
+
+  .text-404 {
+    width: 100%;
+    @include between(column);
+    @include Desktop-l {
+      align-items: flex-start;
+      width: 50%;
+    }
+    margin-top: $element-margin;
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5em;
+      @include Desktop {
+        font-size: 4.2rem;
+      }
+    }
+    p {
+      font-size: 1.8rem;
+      margin-bottom: $element-margin;
+      @include Desktop {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  .btns-404 {
+    @include between(column);
+    @include Desktop-l {
+      flex-direction: row;
+      justify-content: flex-start;
+      button {
+        margin-top: 0;
+        &:not(:first-child) {
+          margin-right: $element-margin;
+        }
+      }
+    }
+
+    button {
+      color: color(white, light);
+      margin-top: $element-margin;
+    }
+  }
+}
+
+// *
+// * button variants
+// *
+
+.first-btn {
+  background-color: color(secondary, light);
+  &:hover {
+    background-color: color(secondary);
+  }
+}
+
+.second-btn {
+  background-color: color(primary, light);
+  &:hover {
+    background-color: color(primary);
+  }
+}
+
+.last-btn {
+  background-color: color(secondary);
+  &:hover {
+    background-color: color(secondary, dark);
+  }
+}

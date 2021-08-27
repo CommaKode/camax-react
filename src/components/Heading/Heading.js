@@ -2,11 +2,11 @@ import React from 'react';
 import './Headeing.scss';
 
 const Heading = (props) => {
-  const { title, ...rest } = props;
+  const { title, heading, ...rest } = props;
   return (
     <h1 className="heading" {...rest}>
       {title}
-      <span>کامکث</span>
+      <span>{heading}</span>
     </h1>
   );
 };

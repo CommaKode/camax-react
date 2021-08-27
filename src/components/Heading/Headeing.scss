@@ -8,11 +8,11 @@
   @include Desktop {
     flex-direction: row;
   }
-  @include Desktop-xl {
-    font-size: 4.8rem;
+  @include Desktop-l {
+    font-size: 4.2rem;
   }
   @include Desktop-xl {
-    font-size: 4.2rem;
+    font-size: 4.8rem;
   }
   span:last-child {
     color: color(primary);

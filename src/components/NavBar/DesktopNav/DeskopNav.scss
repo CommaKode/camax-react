@@ -3,7 +3,7 @@
 .desktop-nav {
   background-color: color(white, light);
   display: none;
-  @include Desktop-xl {
+  @include Desktop-l {
     display: block;
   }
 }

@@ -8,7 +8,7 @@ const Guarantee = () => {
   return (
     <div className="guarantee-section">
       <div className="guar-img container">
-        <Heading title="گارانتی" />
+        <Heading title="گارانتی" heading="کامکث" />
         <img src={pic} alt="guarantee" />
       </div>
       <div className="guar-text container">
