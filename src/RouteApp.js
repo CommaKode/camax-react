@@ -16,7 +16,7 @@ const RouteApp = () => {
       <Route component={ServicesPage} exact path="/services" />
       <Route component={GuaranteePage} exact path="/guarantee" />
       <Route component={Home} exact path="/" />
-      <Route component={Page404} />
+      <Route component={Page404} path="*" />
     </Switch>
   );
 };
